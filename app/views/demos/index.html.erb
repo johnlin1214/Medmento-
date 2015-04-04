@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">.col-xs-6 .col-md-4</div>
+    <div class="col-md-4">.col-xs-6 .col-md-4</div>
+    <div class="col-md-4">.col-xs-6 .col-md-4</div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <%= form_for :demo, url: demos_path do |f| %>
+      <p>
+        <%= f.label :title %><br>
+        <%= f.text_field :title,:required => true %>
+      </p>
+      <p>
+        <%= f.submit 'New Demo'%>
+      </p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <% @demos.each do |demo| %>
+      <tr>
+        <td><%= link_to demo.title, demo_path(demo) %></td>
+        <td><%= demo.created_at.to_formatted_s(:long_ordinal) %></td><br>
+      </tr>
+      <% end %>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Demo: <%= @demo.title %></h2>
+    </div>
+
+    <div class="col-md-2">
+      <h2>
+                <%= link_to 'Edit', edit_demo_path(@demo) %>
+      </h2>
+    </div>
+
+    <div class="col-md-2">
+      <h2>
+        <%= link_to 'Destroy', demo_path(@demo),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %>
+      </h2>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <%= form_for [@demo, @demo.attendants.build] do |f| %>
+      <p>
+        <%= f.label :first_name %><br>
+        <%= f.text_field :first_name %>
+      </p>
+      <p>
+       <%= f.label :last_name %><br>
+       <%= f.text_field  :last_name %>
+     </p>
+     <p>
+       <%= f.label :email %><br>
+       <%= f.text_field :email %>
+     </p>
+     <p>
+       <%= f.label :npi %><br>
+       <%= f.text_field :npi %>
+     </p>
+     <% f.submit %>
+     <% end %>
+   </div>
+ </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <ol>
+        <% @demo.attendants.each do |attendant| %>
+        <li><%= attendant.first_name %> | <%= attendant.last_name %> | <%= attendant.email %> |<%= attendant.npi %></li><br>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</div>
+
