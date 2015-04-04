@@ -42,23 +42,28 @@
        <%= f.label :npi %><br>
        <%= f.text_field :npi %>
      </p>
-     <% f.submit %>
-     <% end %>
-   </div>
- </div>
+      <p>
+      <%= f.submit %>
+      </p>
+    <% end %>
+  </div>
 </div>
-
+</div>
 
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
       <ol>
-        <% @demo.attendants.each do |attendant| %>
-        <li><%= attendant.first_name %> | <%= attendant.last_name %> | <%= attendant.email %> |<%= attendant.npi %></li><br>
-        <% end %>
+    <% @attendants.each do |attendant| %>
+      <li><%= attendant.first_name %> | <%= attendant.last_name %> | <%= attendant.email %> |<%= attendant.npi %>
+        </li>
+      <% end %>
       </ol>
     </div>
   </div>
 </div>
+
+
+<%= link_to 'Back', demos_path %>
 
