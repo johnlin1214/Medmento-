@@ -5,7 +5,7 @@ class DemosController < ApplicationController
 
   def show
     @demo = Demo.find(params[:id])
-
+    @attendants = @demo.attendants.order('created_at DESC')
   end
 
   def create

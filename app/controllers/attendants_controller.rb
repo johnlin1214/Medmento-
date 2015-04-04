@@ -1,4 +1,4 @@
-class AddendantsController < ApplicationController
+class AttendantsController < ApplicationController
   def index
   end
 
@@ -11,7 +11,7 @@ class AddendantsController < ApplicationController
   def create
     @demo = Demo.find(params[:demo_id])
     # @attendant = Demo.attendants.new
-    @attendant = Demo.attendants.create(attendant_params)
+    @attendant = @demo.attendants.create(attendant_params)
     redirect_to demo_path(@demo)
   end
 
@@ -27,6 +27,6 @@ class AddendantsController < ApplicationController
   private
 
   def attendant_params
-    params.require(:demo).permit(:first_name, :last_name, :email, :npi)
+    params.require(:attendant).permit(:first_name, :last_name, :email, :npi)
   end
 end
