@@ -24,7 +24,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 attendant-form">
       <%= form_for [@demo, @demo.attendants.build] do |f| %>
       <p>
         <%= f.label :first_name %><br>
@@ -39,7 +39,8 @@
        <%= f.text_field :email %>
      </p>
      <p>
-       <%= f.label :npi %><br>
+       <%= f.label :npi %>
+       <br>
        <%= f.text_field :npi %>
      </p>
       <p>
