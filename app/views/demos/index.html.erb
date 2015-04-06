@@ -1,37 +1,49 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4">.col-xs-6 .col-md-4</div>
-    <div class="col-md-4">.col-xs-6 .col-md-4</div>
-    <div class="col-md-4">.col-xs-6 .col-md-4</div>
+<div class="navbar navbar-default navbar-fixed-top home-nav">
+  <div class="container">
+    <div class="navbar-brand">Medmento</div>
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container new-demo-form">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-sm-3">
       <%= form_for :demo, url: demos_path do |f| %>
-      <p>
-        <%= f.label :title %><br>
-        <%= f.text_field :title,:required => true %>
-      </p>
-      <p>
-        <%= f.submit 'New Demo'%>
-      </p>
-      <% end %>
-    </div>
+      <p class="font24">
+       <%= f.label :title, 'New Demo Title:' %>
+     </p>
+   </div>
+   <div class="col-sm-5">
+    <p>
+      <%= f.text_field :title, :required => true, :class => "form-control" %>
+    </p>
   </div>
+
+  <div class="col-sm-2">
+    <p>
+      <%= f.submit 'New Demo', :class => "btn btn-default" %>
+    </p>
+    <% end %>
+  </div>
+</div>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <% @demos.each do |demo| %>
+<div class="container table-responsive">
+      <table class="table">
+    <thead>
       <tr>
-        <td><%= link_to demo.title, demo_path(demo) %></td>
-        <td><%= demo.created_at.to_formatted_s(:long_ordinal) %></td><br>
+        <th>Number</th>
+        <th>Demo Name</th>
+        <th>Date</th>
       </tr>
-      <% end %>
-    </div>
-  </div>
+    </thead>
+        <% @demos.each_with_index do |demo, index| %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= link_to demo.title, demo_path(demo) %></td>
+          <td><%= demo.created_at.to_formatted_s(:long_ordinal) %></td>
+        </tr>
+        <% end %>
+      </table>
 </div>
+
 
