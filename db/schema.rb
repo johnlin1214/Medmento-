@@ -11,19 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150404074111) do
+ActiveRecord::Schema.define(version: 20150405201525) do
 
   create_table "attendants", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.integer  "npi"
+    t.integer  "npi",        limit: 8
     t.integer  "demo_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   add_index "attendants", ["demo_id"], name: "index_attendants_on_demo_id"
+  add_index "attendants", ["npi"], name: "index_attendants_on_npi", unique: true
 
   create_table "demos", force: :cascade do |t|
     t.string   "title"

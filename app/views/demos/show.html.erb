@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container panel">
   <div class="row">
     <div class="col-sm-2">
       <h2><%= link_to 'Back', demos_path %></h2>
@@ -27,39 +27,51 @@
   </div>
 </div>
 
-
-<div class="container-fluid">
+<div class="container panel">
   <div class="row">
     <div class="col-sm-12 attendant-form">
       <%= form_for [@demo, @demo.attendants.build] do |f| %>
-      <p>
-        <%= f.label :first_name %><br>
-        <%= f.text_field :first_name, :required => true %>
+      <div class="col-sm-3">
+        <p>
+          <%= f.label :first_name %><br>
+          <%= f.text_field :first_name, :required => true %>
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <p>
+         <%= f.label :last_name %><br>
+         <%= f.text_field  :last_name, :required => true %>
+       </p>
+     </div>
+     <div class="col-sm-3">
+       <p>
+         <%= f.label :email %><br>
+         <%= f.text_field :email, :placeholder => "Enter your email", :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
+       </p>
+     </div>
+     <div class="col-sm-3">
+       <p>
+         <%= f.label :npi %>
+         <br>
+         <%= f.text_field :npi %><p id="npi-confrim">Please Enter A Valid NPI Number</p>
+       </p>
+
+     </div>
+     <div class="row">
+      <div class="col-sm-12 text-center">
+       <p>
+        <%= f.submit %>
       </p>
-      <p>
-       <%= f.label :last_name %><br>
-       <%= f.text_field  :last_name, :required => true %>
-     </p>
-     <p>
-       <%= f.label :email %><br>
-       <%= f.text_field :email, :placeholder => "Enter your email", :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
-     </p>
-     <p>
-       <%= f.label :npi %>
-       <br>
-       <%= f.text_field :npi %><p id="npi-confrim">Please Enter A Valid NPI Number</p>
-     </p>
-      <p>
-      <%= f.submit %>
-      </p>
-    <% end %>
+    </div>
   </div>
+  <% end %>
+</div>
 </div>
 </div>
 
 
 <div class="container table-responsive">
-    <table class="table">
+  <table class="table">
     <thead>
       <tr>
         <th>Number</th>
@@ -69,16 +81,16 @@
         <th>Attendant NPI Number</th>
       </tr>
     </thead>
-        <% @attendants.each_with_index do |attendant, index| %>
-        <tr>
-          <th scope="row"><%= index + 1 %></th>
-          <td><%= attendant.first_name %></td>
-          <td><%= attendant.last_name %></td>
-          <td><%= attendant.email %></td>
-          <td><%= attendant.npi %></td>
-        </tr>
-        <% end %>
-      </table>
+    <% @attendants.each_with_index do |attendant, index| %>
+    <tr>
+      <th scope="row"><%= index + 1 %></th>
+      <td><%= attendant.first_name %></td>
+      <td><%= attendant.last_name %></td>
+      <td><%= attendant.email %></td>
+      <td><%= attendant.npi %></td>
+    </tr>
+    <% end %>
+  </table>
 </div>
 
 

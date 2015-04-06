@@ -10,7 +10,6 @@ class AttendantsController < ApplicationController
 
   def create
     @demo = Demo.find(params[:demo_id])
-    # @attendant = Demo.attendants.new
     @attendant = @demo.attendants.create(attendant_params)
     redirect_to demo_path(@demo)
   end

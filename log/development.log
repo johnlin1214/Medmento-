@@ -22090,3 +22090,3411 @@ Processing by DemosController#show as HTML
   [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 5]]
   Rendered demos/show.html.erb within layouts/application (4.3ms)
 Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+
+  [1m[36m (1.9ms)[0m  [1mCREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: attendants.npi: CREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: attendants.npi: CREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_attendant_on_npi" ON "attendant" ("npi")
+SQLite3::SQLException: no such table: main.attendant: CREATE UNIQUE INDEX "index_attendant_on_npi" ON "attendant" ("npi")
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: attendants.npi: CREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "attendants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "npi" integer, "demo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_attendants_on_demo_id" ON "attendants" ("demo_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "demos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150404074111')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150404064448')[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "attendants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "npi" integer, "demo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX "index_attendants_on_demo_id" ON "attendants" ("demo_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "demos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150404074111')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150404064448')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150405201525"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDemos (20150404064448)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "demos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404064448"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateAttendants (20150404074111)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "attendants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "npi" integer, "demo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_attendants_on_demo_id" ON "attendants" ("demo_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404074111"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150405201525"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Swaniawski LLC"], ["created_at", "2015-04-05 20:19:57.486185"], ["updated_at", "2015-04-05 20:19:57.486185"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "delbert"], ["last_name", "Beahan"], ["email", "heath_zboncak@gmail.com"], ["npi", 1376954206], ["created_at", "2015-04-05 20:19:57.500142"], ["updated_at", "2015-04-05 20:19:57.500142"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-05 20:19:57.512770"], ["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (41.5ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "daron"], ["last_name", "Blick"], ["email", "andres.terry@hotmail.com"], ["npi", 1376954206], ["created_at", "2015-04-05 20:19:57.517302"], ["updated_at", "2015-04-05 20:19:57.517302"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: attendants.npi: INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDemos (20150404064448)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "demos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404064448"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateAttendants (20150404074111)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "attendants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "npi" integer, "demo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_attendants_on_demo_id" ON "attendants" ("demo_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404074111"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150405201525"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Wunsch LLC"], ["created_at", "2015-04-05 20:21:31.743458"], ["updated_at", "2015-04-05 20:21:31.743458"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDemos (20150404064448)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "demos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404064448"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateAttendants (20150404074111)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "attendants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "npi" integer(8), "demo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_attendants_on_demo_id" ON "attendants" ("demo_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404074111"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150405201525"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Upton-Smitham"], ["created_at", "2015-04-05 20:23:11.561798"], ["updated_at", "2015-04-05 20:23:11.561798"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "anya_sanford"], ["last_name", "Gerhold"], ["email", "owen@gmail.com"], ["npi", 8776403516], ["created_at", "2015-04-05 20:23:11.575113"], ["updated_at", "2015-04-05 20:23:11.575113"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-05 20:23:11.627617"], ["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "crystel"], ["last_name", "Kulas"], ["email", "wilburn_kohler@yahoo.com"], ["npi", 8219581000], ["created_at", "2015-04-05 20:23:11.632586"], ["updated_at", "2015-04-05 20:23:11.632586"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-05 20:23:11.635114"], ["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "jana"], ["last_name", "Runte"], ["email", "zachery_jenkins@gmail.com"], ["npi", 3650903134], ["created_at", "2015-04-05 20:23:11.637597"], ["updated_at", "2015-04-05 20:23:11.637597"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-05 20:23:11.639859"], ["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "celia.keebler"], ["last_name", "Moore"], ["email", "eliza@hotmail.com"], ["npi", 9973981177], ["created_at", "2015-04-05 20:23:11.641760"], ["updated_at", "2015-04-05 20:23:11.641760"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-05 20:23:11.643792"], ["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "jayne.hamill"], ["last_name", "Ruecker"], ["email", "mireille_cummerata@gmail.com"], ["npi", 8829264345], ["created_at", "2015-04-05 20:23:11.645719"], ["updated_at", "2015-04-05 20:23:11.645719"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-05 20:23:11.647555"], ["id", 5]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "anya"], ["last_name", "Barrows"], ["email", "edmond@hotmail.com"], ["npi", 5101372941], ["created_at", "2015-04-05 20:23:11.649302"], ["updated_at", "2015-04-05 20:23:11.649302"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-05 20:23:11.651140"], ["id", 6]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "tyler"], ["last_name", "Balistreri"], ["email", "krystina@gmail.com"], ["npi", 9740254919], ["created_at", "2015-04-05 20:23:11.652722"], ["updated_at", "2015-04-05 20:23:11.652722"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-05 20:23:11.654470"], ["id", 7]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Cronin, Reilly and Stracke"], ["created_at", "2015-04-05 20:23:11.656637"], ["updated_at", "2015-04-05 20:23:11.656637"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "ansel.sanford"], ["last_name", "Schamberger"], ["email", "saul.marquardt@gmail.com"], ["npi", 9194709650], ["created_at", "2015-04-05 20:23:11.658530"], ["updated_at", "2015-04-05 20:23:11.658530"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-05 20:23:11.660630"], ["id", 8]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "earnestine.brown"], ["last_name", "Howell"], ["email", "ida.buckridge@gmail.com"], ["npi", 8603894065], ["created_at", "2015-04-05 20:23:11.662577"], ["updated_at", "2015-04-05 20:23:11.662577"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-05 20:23:11.664396"], ["id", 9]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "timmy"], ["last_name", "Lubowitz"], ["email", "aryanna.wunsch@yahoo.com"], ["npi", 1863937914], ["created_at", "2015-04-05 20:23:11.666234"], ["updated_at", "2015-04-05 20:23:11.666234"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-05 20:23:11.668224"], ["id", 10]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "kylee"], ["last_name", "Mraz"], ["email", "berenice@gmail.com"], ["npi", 8207083915], ["created_at", "2015-04-05 20:23:11.670034"], ["updated_at", "2015-04-05 20:23:11.670034"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-05 20:23:11.671689"], ["id", 11]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "martine_brakus"], ["last_name", "Fay"], ["email", "cody.bednar@hotmail.com"], ["npi", 4443779705], ["created_at", "2015-04-05 20:23:11.673528"], ["updated_at", "2015-04-05 20:23:11.673528"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-05 20:23:11.675821"], ["id", 12]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "ismael.skiles"], ["last_name", "Stark"], ["email", "kenya@gmail.com"], ["npi", 9807888086], ["created_at", "2015-04-05 20:23:11.679123"], ["updated_at", "2015-04-05 20:23:11.679123"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-05 20:23:11.681075"], ["id", 13]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "euna"], ["last_name", "Willms"], ["email", "fredy_padberg@gmail.com"], ["npi", 7931618420], ["created_at", "2015-04-05 20:23:11.682802"], ["updated_at", "2015-04-05 20:23:11.682802"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-05 20:23:11.684493"], ["id", 14]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "McKenzie Group"], ["created_at", "2015-04-05 20:23:11.686214"], ["updated_at", "2015-04-05 20:23:11.686214"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "casey"], ["last_name", "Skiles"], ["email", "albina@yahoo.com"], ["npi", 6326379842], ["created_at", "2015-04-05 20:23:11.688062"], ["updated_at", "2015-04-05 20:23:11.688062"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-05 20:23:11.690529"], ["id", 15]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "elta_cummings"], ["last_name", "Walker"], ["email", "mozell.lakin@gmail.com"], ["npi", 5167019870], ["created_at", "2015-04-05 20:23:11.692364"], ["updated_at", "2015-04-05 20:23:11.692364"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-05 20:23:11.694309"], ["id", 16]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "caleigh_hammes"], ["last_name", "Jacobs"], ["email", "osvaldo@gmail.com"], ["npi", 2331288387], ["created_at", "2015-04-05 20:23:11.695988"], ["updated_at", "2015-04-05 20:23:11.695988"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-05 20:23:11.697605"], ["id", 17]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "kathleen.kiehn"], ["last_name", "Murray"], ["email", "logan@hotmail.com"], ["npi", 5894579068], ["created_at", "2015-04-05 20:23:11.699219"], ["updated_at", "2015-04-05 20:23:11.699219"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-05 20:23:11.700898"], ["id", 18]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "yazmin.macejkovic"], ["last_name", "Stark"], ["email", "ola_beatty@gmail.com"], ["npi", 6152372710], ["created_at", "2015-04-05 20:23:11.702862"], ["updated_at", "2015-04-05 20:23:11.702862"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-05 20:23:11.704527"], ["id", 19]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "rick"], ["last_name", "Franecki"], ["email", "delfina@hotmail.com"], ["npi", 3034899915], ["created_at", "2015-04-05 20:23:11.706200"], ["updated_at", "2015-04-05 20:23:11.706200"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-05 20:23:11.707810"], ["id", 20]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "rosalee.luettgen"], ["last_name", "Lueilwitz"], ["email", "judson@gmail.com"], ["npi", 2647821840], ["created_at", "2015-04-05 20:23:11.709499"], ["updated_at", "2015-04-05 20:23:11.709499"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-05 20:23:11.711119"], ["id", 21]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Davis, Littel and Strosin"], ["created_at", "2015-04-05 20:23:11.712720"], ["updated_at", "2015-04-05 20:23:11.712720"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "tristin.tillman"], ["last_name", "Reichel"], ["email", "leta@gmail.com"], ["npi", 5555846460], ["created_at", "2015-04-05 20:23:11.714631"], ["updated_at", "2015-04-05 20:23:11.714631"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-05 20:23:11.716594"], ["id", 22]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "kenny.sipes"], ["last_name", "Koelpin"], ["email", "mustafa.homenick@yahoo.com"], ["npi", 6811156434], ["created_at", "2015-04-05 20:23:11.718462"], ["updated_at", "2015-04-05 20:23:11.718462"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-05 20:23:11.720365"], ["id", 23]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "carmella"], ["last_name", "Boehm"], ["email", "paige_crist@gmail.com"], ["npi", 1207134317], ["created_at", "2015-04-05 20:23:11.721990"], ["updated_at", "2015-04-05 20:23:11.721990"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-05 20:23:11.723702"], ["id", 24]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "wilburn_hyatt"], ["last_name", "Heller"], ["email", "ida@yahoo.com"], ["npi", 9474033225], ["created_at", "2015-04-05 20:23:11.725412"], ["updated_at", "2015-04-05 20:23:11.725412"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-05 20:23:11.727088"], ["id", 25]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "hilma.yundt"], ["last_name", "Connelly"], ["email", "lois@hotmail.com"], ["npi", 4138164269], ["created_at", "2015-04-05 20:23:11.728673"], ["updated_at", "2015-04-05 20:23:11.728673"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-05 20:23:11.730368"], ["id", 26]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "jennifer"], ["last_name", "Prohaska"], ["email", "dewitt@yahoo.com"], ["npi", 5814290225], ["created_at", "2015-04-05 20:23:11.732190"], ["updated_at", "2015-04-05 20:23:11.732190"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-05 20:23:11.734264"], ["id", 27]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "shanelle_keeling"], ["last_name", "Gerlach"], ["email", "laron@gmail.com"], ["npi", 9245446729], ["created_at", "2015-04-05 20:23:11.736525"], ["updated_at", "2015-04-05 20:23:11.736525"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-05 20:23:11.738426"], ["id", 28]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Hudson-Parisian"], ["created_at", "2015-04-05 20:23:11.740245"], ["updated_at", "2015-04-05 20:23:11.740245"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "wilfrid_reinger"], ["last_name", "Kuhlman"], ["email", "valentina@gmail.com"], ["npi", 1399733007], ["created_at", "2015-04-05 20:23:11.742010"], ["updated_at", "2015-04-05 20:23:11.742010"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-05 20:23:11.743905"], ["id", 29]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "tommie"], ["last_name", "Schinner"], ["email", "catharine.krajcik@yahoo.com"], ["npi", 6146480359], ["created_at", "2015-04-05 20:23:11.745486"], ["updated_at", "2015-04-05 20:23:11.745486"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-05 20:23:11.747101"], ["id", 30]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "harvey.marvin"], ["last_name", "Murphy"], ["email", "adelbert@yahoo.com"], ["npi", 7741943762], ["created_at", "2015-04-05 20:23:11.748824"], ["updated_at", "2015-04-05 20:23:11.748824"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-05 20:23:11.750631"], ["id", 31]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "mauricio"], ["last_name", "Feil"], ["email", "vanea@hotmail.com"], ["npi", 3037421346], ["created_at", "2015-04-05 20:23:11.752410"], ["updated_at", "2015-04-05 20:23:11.752410"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-05 20:23:11.754027"], ["id", 32]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "florian_abbott"], ["last_name", "Rosenbaum"], ["email", "rhiannon_borer@yahoo.com"], ["npi", 7993204546], ["created_at", "2015-04-05 20:23:11.755792"], ["updated_at", "2015-04-05 20:23:11.755792"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-05 20:23:11.757641"], ["id", 33]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "mozell"], ["last_name", "Hyatt"], ["email", "consuelo@gmail.com"], ["npi", 8660847996], ["created_at", "2015-04-05 20:23:11.759374"], ["updated_at", "2015-04-05 20:23:11.759374"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-05 20:23:11.761111"], ["id", 34]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "felicia"], ["last_name", "Johnson"], ["email", "betty@gmail.com"], ["npi", 7733368054], ["created_at", "2015-04-05 20:23:11.762956"], ["updated_at", "2015-04-05 20:23:11.762956"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-05 20:23:11.764842"], ["id", 35]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2015-04-05 13:23:19 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 150ms (Views: 135.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:23:19 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:23:19 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:23:19 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:23:19 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:23:19 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:23:19 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:23:19 -0700
+
+
+Started GET "/assets/application-c72f695630ffa6f44d4707c48f73e31c.js?body=1" for ::1 at 2015-04-05 13:23:19 -0700
+
+
+Started GET "/assets/demo-d178e3377b7bdd7f84e669e77b95e7a9.js?body=1" for ::1 at 2015-04-05 13:23:19 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 13:23:20 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mAttendant Load (0.2ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (295.9ms)
+Completed 200 OK in 404ms (Views: 384.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:46:29 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 175ms (Views: 173.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/assets/demo-9cf7b18a0b38240fb02da46887c262fc.js?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/assets/application-add28f92610ea2f94b26ead9464dc829.js?body=1" for ::1 at 2015-04-05 13:46:29 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:46:47 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.2ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 151ms (Views: 149.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/assets/demo-02693035ab0e89c5837d2ed630ecb1ca.js?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/assets/application-2a60da5532bd7076a88faeced43df34d.js?body=1" for ::1 at 2015-04-05 13:46:47 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:47:16 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.2ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 128ms (Views: 126.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:47:16 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:47:16 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:47:16 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:47:16 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:47:16 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:47:16 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:47:16 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:47:16 -0700
+
+
+Started GET "/assets/demo-654f78ec03640f8ae5ed30e277f898dd.js?body=1" for ::1 at 2015-04-05 13:47:16 -0700
+
+
+Started GET "/assets/application-3af1134c85005fa2ab2f2a73797d40b2.js?body=1" for ::1 at 2015-04-05 13:47:16 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:47:17 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:47:19 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/assets/demo-654f78ec03640f8ae5ed30e277f898dd.js?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/assets/application-3af1134c85005fa2ab2f2a73797d40b2.js?body=1" for ::1 at 2015-04-05 13:47:19 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:47:21 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/assets/demo-654f78ec03640f8ae5ed30e277f898dd.js?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/assets/application-3af1134c85005fa2ab2f2a73797d40b2.js?body=1" for ::1 at 2015-04-05 13:47:21 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:47:30 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 175ms (Views: 173.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/assets/demo-570e94794229303e47852e2c3e6637c5.js?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/assets/application-173592bdd391016c973bc05746badc16.js?body=1" for ::1 at 2015-04-05 13:47:30 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:49:54 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 163ms (Views: 161.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/assets/demo-ca7621524dedbd03805c93198fe3dca8.js?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/assets/application-3f93769b96129d929402672da6e8bd2c.js?body=1" for ::1 at 2015-04-05 13:49:55 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:49:57 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 97ms (Views: 96.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/assets/demo-ca7621524dedbd03805c93198fe3dca8.js?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/assets/application-3f93769b96129d929402672da6e8bd2c.js?body=1" for ::1 at 2015-04-05 13:49:57 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:50:39 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 167ms (Views: 164.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/assets/demo-369e611a0ca112d2232aca0d34e60aa8.js?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/assets/application-f315776f408bc38544c9d4936c593958.js?body=1" for ::1 at 2015-04-05 13:50:39 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:50:42 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 101ms (Views: 99.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/assets/demo-369e611a0ca112d2232aca0d34e60aa8.js?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/assets/application-f315776f408bc38544c9d4936c593958.js?body=1" for ::1 at 2015-04-05 13:50:42 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:50:49 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 112ms (Views: 110.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/assets/demo-6ab98cebbc092416a080d9d161abdfec.js?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/assets/application-5890f791236ff9d188e41076fdb34c20.js?body=1" for ::1 at 2015-04-05 13:50:49 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 13:51:06 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 92ms (Views: 90.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/assets/demo-6ab98cebbc092416a080d9d161abdfec.js?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/assets/application-5890f791236ff9d188e41076fdb34c20.js?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:51:06 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:51:25 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 97ms (Views: 95.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/assets/demo-6ab98cebbc092416a080d9d161abdfec.js?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/assets/application-5890f791236ff9d188e41076fdb34c20.js?body=1" for ::1 at 2015-04-05 13:51:26 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:51:46 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 155ms (Views: 154.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/assets/demo-edc559c49f1ce4dce904c4459a854b71.js?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/assets/application-2420630c1c3aa78aed17e557c026f4b7.js?body=1" for ::1 at 2015-04-05 13:51:47 -0700
+
+
+Started GET "/demos/2" for ::1 at 2015-04-05 13:51:52 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 2]]
+  Rendered demos/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 114ms (Views: 112.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/assets/demo-6ab98cebbc092416a080d9d161abdfec.js?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/assets/application-5890f791236ff9d188e41076fdb34c20.js?body=1" for ::1 at 2015-04-05 13:51:52 -0700
+
+
+Started GET "/" for ::1 at 2015-04-05 13:53:24 -0700
+Processing by DemosController#index as HTML
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+  Rendered demos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 108ms (Views: 107.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/assets/demo-9da03bbcc373cce06a448a72dc7ce7b4.js?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/assets/application-e57a898216ec77573545a6d863c15aa7.js?body=1" for ::1 at 2015-04-05 13:53:24 -0700
+
+
+Started GET "/" for ::1 at 2015-04-05 13:53:26 -0700
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/assets/demo-9da03bbcc373cce06a448a72dc7ce7b4.js?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/assets/application-e57a898216ec77573545a6d863c15aa7.js?body=1" for ::1 at 2015-04-05 13:53:26 -0700
+
+
+Started GET "/" for ::1 at 2015-04-05 13:54:49 -0700
+Processing by DemosController#index as HTML
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+  Rendered demos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 179ms (Views: 178.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/assets/demo-5a01f4ff271507b2492bb4a7b904fb0f.js?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/assets/application-58fc211098835f19c48de53cbb365a27.js?body=1" for ::1 at 2015-04-05 13:54:49 -0700
+
+
+Started GET "/" for ::1 at 2015-04-05 13:54:51 -0700
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 87ms (Views: 86.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/assets/demo-5a01f4ff271507b2492bb4a7b904fb0f.js?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/assets/application-58fc211098835f19c48de53cbb365a27.js?body=1" for ::1 at 2015-04-05 13:54:51 -0700
+
+
+Started GET "/" for ::1 at 2015-04-05 13:54:57 -0700
+Processing by DemosController#index as HTML
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+  Rendered demos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 156ms (Views: 155.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/assets/demo-98ed73bce6d69631d9de8f246692ddfe.js?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/assets/application-d4b11e17c60e45e2c0b4e4eed30dcd2e.js?body=1" for ::1 at 2015-04-05 13:54:57 -0700
+
+
+Started GET "/" for ::1 at 2015-04-05 13:55:00 -0700
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 124ms (Views: 122.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/assets/demo-5a01f4ff271507b2492bb4a7b904fb0f.js?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/assets/application-58fc211098835f19c48de53cbb365a27.js?body=1" for ::1 at 2015-04-05 13:55:00 -0700
+
+
+Started GET "/" for ::1 at 2015-04-05 13:55:10 -0700
+Processing by DemosController#index as HTML
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+  Rendered demos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 116ms (Views: 115.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/assets/demo-a63bd83a02ef3021600050d3d0d1421a.js?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/assets/application-49b0f5c297f0fc5a97126872348c042a.js?body=1" for ::1 at 2015-04-05 13:55:10 -0700
+
+
+Started GET "/" for ::1 at 2015-04-05 13:56:33 -0700
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 158ms (Views: 157.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/assets/demo-fccba9e325a2b42154397096219bdcef.js?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/assets/application-85dcc70cef21ef685981b86b969bece0.js?body=1" for ::1 at 2015-04-05 13:56:33 -0700
+
+
+Started GET "/" for ::1 at 2015-04-05 13:57:00 -0700
+Processing by DemosController#index as HTML
+  [1m[36mDemo Load (0.3ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+  Rendered demos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 155ms (Views: 154.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/assets/demo-adc97de17183eb256de1e1cea5c537ac.js?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/assets/application-8ac9133388a8a73a00b3cfc81dcfac92.js?body=1" for ::1 at 2015-04-05 13:57:00 -0700
+
+
+Started GET "/demos/4" for ::1 at 2015-04-05 13:57:22 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 4]]
+  Rendered demos/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 93ms (Views: 91.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-04-05 23:07:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 262ms (Views: 250.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/demo-fb39448a87b89ce3a6d7481e6ed51e5d.js?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/application-315019c1c4b892081cae12af946ef3aa.js?body=1" for ::1 at 2015-04-05 23:07:03 -0700
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:07:06 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:07:06 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:07:06 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:07:06 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:07:16 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mAttendant Load (0.3ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (263.9ms)
+Completed 200 OK in 410ms (Views: 354.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:07:18 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/assets/demo-fb39448a87b89ce3a6d7481e6ed51e5d.js?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/assets/application-315019c1c4b892081cae12af946ef3aa.js?body=1" for ::1 at 2015-04-05 23:07:18 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:07:29 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/assets/demo-fb39448a87b89ce3a6d7481e6ed51e5d.js?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/assets/application-315019c1c4b892081cae12af946ef3aa.js?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:07:29 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:08:10 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 112ms (Views: 110.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/assets/demo-a404d813d36af5f468eca7f3984507a6.js?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/assets/application-e6c9addc907792c0c06cd3dcb1c3ec86.js?body=1" for ::1 at 2015-04-05 23:08:10 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:08:23 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 118ms (Views: 117.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/assets/demo-fb39448a87b89ce3a6d7481e6ed51e5d.js?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/assets/application-315019c1c4b892081cae12af946ef3aa.js?body=1" for ::1 at 2015-04-05 23:08:24 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:09:07 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mAttendant Load (0.2ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 175ms (Views: 173.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/assets/demo-adc97de17183eb256de1e1cea5c537ac.js?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/assets/application-8ac9133388a8a73a00b3cfc81dcfac92.js?body=1" for ::1 at 2015-04-05 23:09:07 -0700
+
+
+Started GET "/" for ::1 at 2015-04-05 23:09:33 -0700
+Processing by DemosController#index as HTML
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+  Rendered demos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 109ms (Views: 108.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:09:33 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:09:33 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:09:33 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:09:33 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:09:33 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:09:33 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:09:33 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:09:33 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:09:33 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:11:57 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 167ms (Views: 165.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/assets/demo-bb4ccc2c1d2e9ec51d88754004eedb7e.js?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/assets/application-c15299f1d588ca9a7bdc888aff7c18ac.js?body=1" for ::1 at 2015-04-05 23:11:58 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:12:54 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 154ms (Views: 152.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-05 23:12:54 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:12:55 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 98ms (Views: 96.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-05 23:12:55 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:12:56 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-05 23:12:56 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:12:56 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 101ms (Views: 99.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-05 23:12:57 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-05 23:13:01 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:13:01 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 23:13:01 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 23:13:01 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 23:13:01 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-05 23:13:01 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-05 23:13:02 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 23:13:02 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:13:02 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 23:13:02 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-05 23:13:02 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-05 23:13:02 -0700
+
+
+Started GET "/" for ::1 at 2015-04-06 10:54:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError - The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.:
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:63:in `rescue in controller'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:58:in `controller'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/520f4e814423901d/variables" for ::1 at 2015-04-06 10:54:44 -0700
+
+
+Started GET "/" for ::1 at 2015-04-06 10:55:03 -0700
+Processing by DemosController#index as HTML
+Completed 406 Not Acceptable in 13ms (ActiveRecord: 0.0ms)
+
+ActionController::UnknownFormat - ActionController::UnknownFormat:
+  actionpack (4.2.1) lib/action_controller/metal/mime_responds.rb:217:in `respond_to'
+  app/controllers/demos_controller.rb:5:in `index'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/40b7f8b449e24034/variables" for ::1 at 2015-04-06 10:55:03 -0700
+  [1m[35mDemo Load (0.7ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+
+
+Started GET "/" for ::1 at 2015-04-06 10:55:18 -0700
+Processing by DemosController#index as HTML
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms)
+
+ActionController::UnknownFormat - ActionController::UnknownFormat:
+  actionpack (4.2.1) lib/action_controller/metal/mime_responds.rb:217:in `respond_to'
+  app/controllers/demos_controller.rb:5:in `index'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/524621fcc04ebe98/variables" for ::1 at 2015-04-06 10:55:18 -0700
+  [1m[36mDemo Load (0.3ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+
+
+Started GET "/" for ::1 at 2015-04-06 10:55:19 -0700
+Processing by DemosController#index as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::UnknownFormat - ActionController::UnknownFormat:
+  actionpack (4.2.1) lib/action_controller/metal/mime_responds.rb:217:in `respond_to'
+  app/controllers/demos_controller.rb:5:in `index'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/e179a2877d38f32f/variables" for ::1 at 2015-04-06 10:55:19 -0700
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+
+
+Started GET "/" for ::1 at 2015-04-06 10:55:20 -0700
+Processing by DemosController#index as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::UnknownFormat - ActionController::UnknownFormat:
+  actionpack (4.2.1) lib/action_controller/metal/mime_responds.rb:217:in `respond_to'
+  app/controllers/demos_controller.rb:5:in `index'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/c9f47a609320c9e7/variables" for ::1 at 2015-04-06 10:55:20 -0700
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+
+
+Started GET "/" for ::1 at 2015-04-06 10:55:31 -0700
+Processing by DemosController#index as HTML
+Completed 406 Not Acceptable in 45ms (ActiveRecord: 0.0ms)
+
+ActionController::UnknownFormat - ActionController::UnknownFormat:
+  actionpack (4.2.1) lib/action_controller/metal/mime_responds.rb:217:in `respond_to'
+  app/controllers/demos_controller.rb:5:in `index'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/65c44138ff8ffde7/variables" for ::1 at 2015-04-06 10:55:31 -0700
+  [1m[35mDemo Load (0.3ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+
+
+Started GET "/" for ::1 at 2015-04-06 10:55:32 -0700
+Processing by DemosController#index as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::UnknownFormat - ActionController::UnknownFormat:
+  actionpack (4.2.1) lib/action_controller/metal/mime_responds.rb:217:in `respond_to'
+  app/controllers/demos_controller.rb:5:in `index'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/260c788ce003540a/variables" for ::1 at 2015-04-06 10:55:32 -0700
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+
+
+Started GET "/" for ::1 at 2015-04-06 10:55:33 -0700
+Processing by DemosController#index as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::UnknownFormat - ActionController::UnknownFormat:
+  actionpack (4.2.1) lib/action_controller/metal/mime_responds.rb:217:in `respond_to'
+  app/controllers/demos_controller.rb:5:in `index'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/0bf2eeec270609cf/variables" for ::1 at 2015-04-06 10:55:33 -0700
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+
+
+Started GET "/" for ::1 at 2015-04-06 10:55:49 -0700
+Processing by DemosController#index as HTML
+  [1m[36mDemo Load (0.3ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+  Rendered demos/index.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 190ms (Views: 185.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 10:55:49 -0700
+
+
+Started GET "/" for ::1 at 2015-04-06 10:56:04 -0700
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.3ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 94ms (Views: 90.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 10:56:05 -0700
+
+
+Started GET "/" for ::1 at 2015-04-06 11:03:29 -0700
+Processing by DemosController#index as HTML
+  [1m[36mDemo Load (0.3ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+  Rendered demos/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 95ms (Views: 91.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:03:29 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:03:36 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.2ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.8ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (288.7ms)
+Completed 200 OK in 440ms (Views: 372.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:06:36 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.3ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 110ms (Views: 100.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:06:36 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:06:37 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 93ms (Views: 91.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:06:37 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:07:52 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 95ms (Views: 93.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:07:52 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:08:33 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.2ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 101ms (Views: 99.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:08:33 -0700
+
+
+Started POST "/demos/3/attendants" for ::1 at 2015-04-06 11:08:48 -0700
+Processing by AttendantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bYyJwUeGdLunR0pGQepAWbQrX4BlKU4OA09Q1ktKjdiNHb68c5SB73Xq6aU6G9aCrGRKbJJNurkfXUDCdUlcJQ==", "attendant"=>{"first_name"=>"John", "last_name"=>"Lin ", "email"=>"johnlin1214@gmail.com", "npi"=>"12341234213"}, "commit"=>"Create Attendant", "demo_id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "demo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "John"], ["last_name", "Lin "], ["email", "johnlin1214@gmail.com"], ["npi", 12341234213], ["demo_id", 3], ["created_at", "2015-04-06 18:08:48.631371"], ["updated_at", "2015-04-06 18:08:48.631371"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/demos/3
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:08:48 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 98ms (Views: 96.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:08:48 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:09:24 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 90ms (Views: 88.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:09:24 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:09:31 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 90ms (Views: 88.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:09:31 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:10:24 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 101ms (Views: 98.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:10:24 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:10:32 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 91ms (Views: 89.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:10:32 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:11:23 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.3ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 92ms (Views: 89.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:11:23 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:11:40 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 98ms (Views: 96.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:11:40 -0700
+
+
+Started GET "/demos/3" for ::1 at 2015-04-06 11:11:45 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 3]]
+  Rendered demos/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 96ms (Views: 93.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:11:45 -0700
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-06 11:11:45 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-06 11:11:45 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-06 11:11:45 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-06 11:11:45 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-06 11:11:45 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:11:45 -0700
+
+
+Started GET "/assets/demo-c73bdb7c1c79eedb3c4777812972b5b6.js?body=1" for ::1 at 2015-04-06 11:11:45 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-06 11:11:45 -0700
+
+
+Started GET "/assets/application-7f62e9701af1c58250f29c2b7ee01514.js?body=1" for ::1 at 2015-04-06 11:11:45 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-06 11:11:45 -0700
