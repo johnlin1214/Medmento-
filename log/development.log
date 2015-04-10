@@ -26493,3 +26493,2475 @@ Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 a
 
 
 Started GET "/assets/application-501df761f2a1a1448075fee147e0c50f.js?body=1" for ::1 at 2015-04-09 18:34:32 -0700
+
+
+Started GET "/demos/6" for ::1 at 2015-04-09 18:35:35 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 97ms (Views: 95.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/demo-2a3a2ab976a259ef040bf3b038b64826.js?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/application-501df761f2a1a1448075fee147e0c50f.js?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:35:35 -0700
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:35:37 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:35:37 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:35:37 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:35:37 -0700
+
+
+Started GET "/demos/6" for ::1 at 2015-04-09 18:37:39 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 166ms (Views: 164.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/assets/demo-44871707a09d90fd8defc642ab3c3c27.js?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/assets/application-6f13abacb03fcb8bb7487a3f76987f0e.js?body=1" for ::1 at 2015-04-09 18:37:39 -0700
+
+
+Started GET "/demos/6?fname=asdfasd&lname=as" for ::1 at 2015-04-09 18:37:42 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"asdfasd", "lname"=>"as", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 107ms (Views: 105.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:37:42 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:37:42 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:37:42 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:37:42 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:37:42 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:37:42 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:37:42 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:37:42 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:37:42 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:37:43 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 101ms (Views: 99.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:37:44 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:37:44 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:37:44 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:37:44 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:37:44 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:37:44 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:37:44 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:37:44 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:37:44 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:38:05 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 161ms (Views: 160.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/assets/demo-98cf488acd857a3ef11703b567543273.js?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/assets/application-6cb4b86715b758f905dfa2b61429bf8d.js?body=1" for ::1 at 2015-04-09 18:38:05 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:38:11 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 168ms (Views: 166.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/assets/demo-513b73fec4066eabfed7f7c9072dad5e.js?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/assets/application-56e493d2574e0afe3680c88cea9a69f1.js?body=1" for ::1 at 2015-04-09 18:38:11 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:40:52 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 154ms (Views: 152.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/assets/demo-8f7eea9954c4079a2a6275fc936d9c7f.js?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/assets/application-a28f0958ecb818187a10ad0ae707653e.js?body=1" for ::1 at 2015-04-09 18:40:52 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:42:07 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 155ms (Views: 153.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/assets/demo-968b775d7e7aa3e6afb10531813df2ec.js?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/assets/application-466d1d9fea0e0b922317ffca5b8d7c2e.js?body=1" for ::1 at 2015-04-09 18:42:07 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:49:46 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 110ms (Views: 109.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/assets/demo-aa4b4dba1e28104d9f47b4d59835e3aa.js?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/assets/application-4ebe045dc868bff82e07602433798319.js?body=1" for ::1 at 2015-04-09 18:49:46 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:50:01 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 115ms (Views: 114.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/assets/demo-dae7d038c60ab4ae8dce65669eb3392e.js?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/assets/application-feea6d2ec7448243c572191328cfdee8.js?body=1" for ::1 at 2015-04-09 18:50:01 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:50:34 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 148ms (Views: 147.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/assets/demo-e5692d80a646665e931b8bb68d0fff8c.js?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/assets/application-5a7fb0e68560a0bc065b720dedce8f4e.js?body=1" for ::1 at 2015-04-09 18:50:34 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:50:59 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 155ms (Views: 154.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/assets/demo-1c6665163009a374a6e712ea56b2d70f.js?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/assets/application-64d577211009d62396e27cf7cf67b64c.js?body=1" for ::1 at 2015-04-09 18:51:00 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:51:10 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 165ms (Views: 164.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/assets/demo-18e0326ba57dc540509364e18c8f0385.js?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/assets/application-bc3bddb005083d8ea62dec91d90a0f4a.js?body=1" for ::1 at 2015-04-09 18:51:10 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:51:29 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 147ms (Views: 146.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/assets/demo-2639a14bf8110b2e291bae333a3a586c.js?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/assets/application-02852f8ae714041832ce28c09c84bde0.js?body=1" for ::1 at 2015-04-09 18:51:29 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:51:47 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 164ms (Views: 163.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/assets/demo-2fc16febabe04228562d0292be9a0f44.js?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/assets/application-ef6d28527eb3f2d5d052805e9234bb1c.js?body=1" for ::1 at 2015-04-09 18:51:48 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:52:15 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 155ms (Views: 153.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/assets/demo-0b7f760054238a5e713498b624a88c84.js?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/assets/application-033757a5d026404dc93927ea559f76c6.js?body=1" for ::1 at 2015-04-09 18:52:15 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:52:54 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 152ms (Views: 150.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/assets/demo-c0b476d7d2d627492f0066e041907524.js?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/assets/application-a4e55dec57e795428a931cbe650148eb.js?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:52:54 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:58:43 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 149ms (Views: 147.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/assets/demo-51dfda6c0c0f219962a6864d1187f5c0.js?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/assets/application-e805362dc21923ce482d5b362d1fff2c.js?body=1" for ::1 at 2015-04-09 18:58:43 -0700
+
+
+Started GET "/demos/6?fname=&lname=" for ::1 at 2015-04-09 18:58:45 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"fname"=>"", "lname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 99ms (Views: 97.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/assets/demo-51dfda6c0c0f219962a6864d1187f5c0.js?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/assets/application-e805362dc21923ce482d5b362d1fff2c.js?body=1" for ::1 at 2015-04-09 18:58:45 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 18:58:49 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/assets/demo-51dfda6c0c0f219962a6864d1187f5c0.js?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/assets/application-e805362dc21923ce482d5b362d1fff2c.js?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:58:50 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 18:58:51 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 98ms (Views: 96.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/assets/demo-51dfda6c0c0f219962a6864d1187f5c0.js?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/assets/application-e805362dc21923ce482d5b362d1fff2c.js?body=1" for ::1 at 2015-04-09 18:58:51 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 18:59:50 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 165ms (Views: 164.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/assets/demo-d67e67a07a7625cd103f91c3c94dd3a7.js?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/assets/application-def10e92a8812c4cd9de8ef8d2ebada8.js?body=1" for ::1 at 2015-04-09 18:59:50 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:00:57 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 153ms (Views: 151.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/assets/demo-67c18854badaeff6fa0de0d793ebcc36.js?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/assets/application-34b81c8136f9ab2c620f6341d3b2d8e1.js?body=1" for ::1 at 2015-04-09 19:00:57 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:01:04 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.2ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 163ms (Views: 161.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/assets/demo-34f7ceaf8eb2ebff9dd3db5d9b171859.js?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/assets/application-845e5312365f0bdbfda9eb31a3539b25.js?body=1" for ::1 at 2015-04-09 19:01:04 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:01:16 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.2ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 159ms (Views: 157.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/assets/demo-da61f53da5ed840ddeeba1b4895271c2.js?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/assets/application-1097f95581e8a8e54a1a0cd8f6393e42.js?body=1" for ::1 at 2015-04-09 19:01:16 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:01:32 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 166ms (Views: 164.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/assets/demo-95e658709fc73d1250ccafa73ff63406.js?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/assets/application-512d53ecfb8d5c327205d9380fa6ffac.js?body=1" for ::1 at 2015-04-09 19:01:32 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:01:47 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 155ms (Views: 153.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/assets/demo-67c18854badaeff6fa0de0d793ebcc36.js?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/assets/application-34b81c8136f9ab2c620f6341d3b2d8e1.js?body=1" for ::1 at 2015-04-09 19:01:47 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:02:32 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.2ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 104ms (Views: 102.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/assets/demo-67c18854badaeff6fa0de0d793ebcc36.js?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/assets/application-34b81c8136f9ab2c620f6341d3b2d8e1.js?body=1" for ::1 at 2015-04-09 19:02:32 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:04:39 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 171ms (Views: 169.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/demo-2a55cff10ff25180005ed0185bbb3c02.js?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/application-ce5c8f7a62d1b9581a90a60f993b444d.js?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:04:39 -0700
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:04:44 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:04:44 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:04:44 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:04:44 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:05:35 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 156ms (Views: 154.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/assets/demo-279de0194006a0bc1a893fa0212ff328.js?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/assets/application-f09050bffad8c232aa0bfd00a27e8f3f.js?body=1" for ::1 at 2015-04-09 19:05:35 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:06:18 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 160ms (Views: 158.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/assets/demo-fa1d39d71bb0d34b461491e317202305.js?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/assets/application-ff96aa73852811bc4533b6b02e8d7ea3.js?body=1" for ::1 at 2015-04-09 19:06:18 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:06:42 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 166ms (Views: 164.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/assets/demo-3af6b23e5aced48160ef5c991d0b5bb2.js?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/assets/application-0892c3afafbed9cf8322002aaaa2b768.js?body=1" for ::1 at 2015-04-09 19:06:42 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:06:52 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 161ms (Views: 159.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/assets/demo-83bda28676521c4f7bfd4ad7db61e11b.js?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/assets/application-d4f89c1ce849d2f0a52930032976951c.js?body=1" for ::1 at 2015-04-09 19:06:52 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:07:48 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.2ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 173ms (Views: 171.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/assets/demo-243f83922e7ccd901fc707b953d2fe50.js?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/assets/application-8ac9e5822364d3acff250c44df9b9df3.js?body=1" for ::1 at 2015-04-09 19:07:48 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:08:19 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 165ms (Views: 162.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/assets/demo-0e5508737add5151c893f53dc2111586.js?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/assets/application-423fbd06d13314b1a60d72861a558524.js?body=1" for ::1 at 2015-04-09 19:08:19 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:08:20 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 98ms (Views: 96.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:08:20 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:08:20 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:08:20 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:08:20 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:08:20 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:08:20 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:08:20 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:08:20 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:08:20 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:09:17 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.2ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 155ms (Views: 152.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/assets/demo-0a4e78571214034e8064498f3a8edee6.js?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/assets/application-501599adf1b5b385206024cffc5f4005.js?body=1" for ::1 at 2015-04-09 19:09:17 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:09:26 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 161ms (Views: 159.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/assets/demo-59691bd24bbf07f7187b25f8fd9a3885.js?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/assets/application-eb35b51124ea3c8f5b903d34cd601b4c.js?body=1" for ::1 at 2015-04-09 19:09:26 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:09:35 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 120ms (Views: 118.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/assets/demo-a97ddaad15db63b222c26d9e4227937c.js?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/assets/application-2bda49aed605617e9c931bfea6036b3b.js?body=1" for ::1 at 2015-04-09 19:09:36 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:08 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 116ms (Views: 113.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/assets/demo-93bea23fe01514c51aa776d33257b1ae.js?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/assets/application-e236d1fb5266739e8defd7c5c29f9173.js?body=1" for ::1 at 2015-04-09 19:12:08 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:42 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 121ms (Views: 119.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/assets/demo-d90cb250ba29959c2d8f99fa18b91560.js?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/assets/application-c919c594c7e7c757a5a6557481f94a3a.js?body=1" for ::1 at 2015-04-09 19:12:42 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:43 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:43 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:43 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:43 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:43 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:43 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:43 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:43 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:43 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:43 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:45 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:45 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:45 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:45 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:45 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:45 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:45 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:45 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:45 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:45 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:46 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 101ms (Views: 99.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/demo-d90cb250ba29959c2d8f99fa18b91560.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/application-c919c594c7e7c757a5a6557481f94a3a.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:46 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 108ms (Views: 106.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/demo-d90cb250ba29959c2d8f99fa18b91560.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/assets/application-c919c594c7e7c757a5a6557481f94a3a.js?body=1" for ::1 at 2015-04-09 19:12:46 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:47 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 116ms (Views: 114.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/demo-d90cb250ba29959c2d8f99fa18b91560.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:47 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 104ms (Views: 103.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-c919c594c7e7c757a5a6557481f94a3a.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/demo-d90cb250ba29959c2d8f99fa18b91560.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/application-c919c594c7e7c757a5a6557481f94a3a.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:47 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/demo-d90cb250ba29959c2d8f99fa18b91560.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/assets/application-c919c594c7e7c757a5a6557481f94a3a.js?body=1" for ::1 at 2015-04-09 19:12:47 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:47 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 103ms (Views: 102.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/demo-d90cb250ba29959c2d8f99fa18b91560.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/application-c919c594c7e7c757a5a6557481f94a3a.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:48 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 95ms (Views: 94.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/demo-d90cb250ba29959c2d8f99fa18b91560.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/assets/application-c919c594c7e7c757a5a6557481f94a3a.js?body=1" for ::1 at 2015-04-09 19:12:48 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:12:51 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 92ms (Views: 90.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/assets/demo-d90cb250ba29959c2d8f99fa18b91560.js?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/assets/application-c919c594c7e7c757a5a6557481f94a3a.js?body=1" for ::1 at 2015-04-09 19:12:51 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:13:01 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 154ms (Views: 152.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/assets/demo-77254cf43d1de052819d944fecd2b775.js?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/assets/application-7ccf8f2dfd8043a6582fd64da4ed1dcc.js?body=1" for ::1 at 2015-04-09 19:13:01 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:14:47 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.2ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 165ms (Views: 163.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/assets/demo-d9c11d946552d5de7d52f0cc44fc5c86.js?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/assets/application-14cefcea80be6a0d00ea7c9f12a3f190.js?body=1" for ::1 at 2015-04-09 19:14:48 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:14:51 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/assets/demo-d9c11d946552d5de7d52f0cc44fc5c86.js?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/assets/application-14cefcea80be6a0d00ea7c9f12a3f190.js?body=1" for ::1 at 2015-04-09 19:14:51 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:15:50 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 115ms (Views: 114.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/assets/demo-ace289031920f90ad4fe1fefb30f0ff5.js?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/assets/application-3a851bf7e266e8850edb4ead92e1a602.js?body=1" for ::1 at 2015-04-09 19:15:50 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:16:02 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 110ms (Views: 108.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/assets/demo-da57d80e2391d88f67cbe0a7b3fbfa50.js?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/assets/application-c8b6952a3f46486cd8f8c98c1c80d923.js?body=1" for ::1 at 2015-04-09 19:16:02 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:16:03 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/assets/demo-da57d80e2391d88f67cbe0a7b3fbfa50.js?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/assets/application-c8b6952a3f46486cd8f8c98c1c80d923.js?body=1" for ::1 at 2015-04-09 19:16:03 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:16:09 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 167ms (Views: 165.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/assets/demo-7aad9d0914c1a4521263de23396e17b5.js?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/assets/application-175652a3d96e989029418b246b7612c2.js?body=1" for ::1 at 2015-04-09 19:16:09 -0700
+
+
+Started GET "/demos/6?firstname=&lastname=" for ::1 at 2015-04-09 19:17:10 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"firstname"=>"", "lastname"=>"", "id"=>"6"}
+  [1m[35mDemo Load (0.1ms)[0m  SELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 159ms (Views: 157.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:17:10 -0700
+
+
+Started GET "/assets/demos-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 19:17:10 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 19:17:10 -0700
+
+
+Started GET "/assets/home-48f555c5910814895d8ea8726daafcbf.css?body=1" for ::1 at 2015-04-09 19:17:10 -0700
+
+
+Started GET "/assets/application-4d086fa97bd73ae89ee4acbc40ebba4d.css?body=1" for ::1 at 2015-04-09 19:17:10 -0700
+
+
+Started GET "/assets/attendants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:17:10 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 19:17:10 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 19:17:10 -0700
+
+
+Started GET "/assets/demo-3196c83e9b762fe652ab3e0b033100ef.js?body=1" for ::1 at 2015-04-09 19:17:10 -0700
+
+
+Started GET "/assets/demos-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 19:17:10 -0700
+
+
+Started GET "/assets/application-0512707dd7ddcf1706f57b3a04ae73fc.js?body=1" for ::1 at 2015-04-09 19:17:10 -0700
