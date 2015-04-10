@@ -31,13 +31,13 @@
   <div class="row">
     <div class="col-sm-12 attendant-form">
       <%= form_for [@demo, @demo.attendants.build] do |f| %>
-      <div class="col-sm-3">
+      <div class="col-sm-2">
         <p>
           <%= f.label :first_name %><br>
           <%= f.text_field :first_name, :required => true %>
         </p>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-2">
         <p>
          <%= f.label :last_name %><br>
          <%= f.text_field  :last_name, :required => true %>
@@ -46,29 +46,38 @@
      <div class="col-sm-3">
        <p>
          <%= f.label :email %><br>
-         <%= f.text_field :email, :placeholder => "Enter your email", :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
+         <%= f.text_field :email, :placeholder => "Enter your email", :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}', :size=>"32"%>
        </p>
      </div>
      <div class="col-sm-3">
        <p>
          <%= f.label :npi %>
          <br>
-         <%= f.text_field :npi %><p id="npi-confrim">Please Enter A Valid NPI Number</p>
+         <%= f.text_field :npi %><p id="npi-confrim">Invalid NPI Number</p>
        </p>
-
      </div>
-     <div class="row">
-      <div class="col-sm-12 text-center">
+      <div class="col-sm-2">
        <p>
         <%= f.submit %>
-      </p>
-    </div>
-  </div>
+       </p>
+     </div>
   <% end %>
 </div>
 </div>
 </div>
 
+
+<div class="container panel">
+  <div class="row">
+    <div class="col-sm-12">
+      <form>
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+        <input type="submit" value="Search">
+      </form>
+    </div>
+  </div>
+</div>
 
 <div class="container table-responsive">
   <table class="table">

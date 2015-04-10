@@ -1,6 +1,6 @@
 $(function() {
   $('#attendant_npi').on('keyup', validateNpiNumber);
-   lookUpNpiNumber("NABARRETE")
+  lookUpNpiNumber();
 });
 
 function validateNpiNumber() {
@@ -20,11 +20,12 @@ function validateNpiNumber() {
     };
 }
 
-function lookUpNpiNumber(last) {
-  // link = 'http://www.bloomapi.com/api/search?limit=10&offset=0&key1=last_name&op1=eq&value1='+ last +'&key2=first_name&op2=eq&value2=' + first
+function lookUpNpiNumber(last, first) {
+  last = 'LIN'
+  first = 'JOHN'
   $.ajax({
     type: 'GET',
-    url: 'http://www.bloomapi.com/api/search?offset=0&key1=last_name&op1=eq&value1=LIN&key2=first_name&op2=eq&value2=JOHN',
+    url: 'http://www.bloomapi.com/api/search?offset=0&key1=last_name&op1=eq&value1=' + last + '&key2=first_name&op2=eq&value2=' + first,
     dataType: 'jsonp',
     cache: true
   }).done(function(server_data) {
