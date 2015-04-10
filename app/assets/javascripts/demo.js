@@ -41,7 +41,7 @@ function lookUpNpiNumber(evt) {
       console.log(data.practice_address.state)
       console.log(data.practice_address.zip)
       console.log(data.practice_address.phone)
-      $('#search-table tr:last').append("<h2>Hello<h2>")
+      // $('#search-table tr:last').append("<h2>Hello<h2>")
     })
   }).fail(console.log("failed"));
 }
