@@ -41,9 +41,13 @@ function lookUpNpiNumber(evt) {
 
 function addSelectedNPInumber() {
   var npiSelected = $(this).closest('tr').find(".npi-result").text();
-  console.log(npiSelected);
   $('#attendant_npi').val(npiSelected);
   $('#npi-confrim').text("NPI Number Found").css("color", "green");
+  $('.npi-search-bar').on('click', '.npi-select', function() {
+    $( ".npi-search-bar" ).slideUp( "slow" );
+  });
 }
+
+
 // 1013903475
 // 101390347
