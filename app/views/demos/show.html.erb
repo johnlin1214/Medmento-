@@ -6,6 +6,14 @@
 
 <div class="container panel">
   <div class="row">
+    <div class="col-sm-12">
+      <h2>Demo: <%= @demo.title %></h2>
+    </div>
+  </div>
+</div>
+<!--
+<div class="container panel">
+  <div class="row">
     <div class="col-sm-2">
       <h2><%= link_to 'Back', demos_path %></h2>
     </div>
@@ -25,7 +33,7 @@
       </h2>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="container panel">
   <div class="row">
@@ -66,17 +74,18 @@
 </div>
 </div>
 
-
-<div class="container panel">
+<div class="container panel npi-search-bar">
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-12">
       <form id="npi-name-lookup">
-        First name: <input type="text" name="firstname"><br>
-        Last name: <input type="text" name="lastname"><br>
+        First name: <input type="text" name="firstname">
+        Last name: <input type="text" name="lastname">
         <input type="submit" value="Search">
       </form>
     </div>
-    <div class="col-sm-9">
+  </div>
+  <div class="row">
+     <div class="col-sm-12">
        <table class="table" id="search-table">
           <thead>
             <tr>
@@ -85,6 +94,7 @@
               <th>City</th>
               <th>State</th>
               <th>NPI</th>
+              <th>Select</th>
             </tr>
           </thead>
         </table>
@@ -92,7 +102,9 @@
   </div>
 </div>
 
+
 <div class="container table-responsive">
+  <h3 class="center">Signed In Attendants</h3>
   <table class="table">
     <thead>
       <tr>
