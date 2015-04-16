@@ -35,9 +35,9 @@
   </div>
 </div> -->
 
-<div class="container panel">
+<div class="container panel sign-in-form">
   <div class="row">
-    <div class="col-sm-12 attendant-form">
+    <div class="attendant-form">
       <%= form_for [@demo, @demo.attendants.build] do |f| %>
       <div class="col-sm-2">
         <p>
@@ -59,9 +59,9 @@
      </div>
      <div class="col-sm-3">
        <p>
-         <%= f.label :npi %>
+         <%= f.label :npi, "Enter A Valid NPI Number", :id => "npi-confrim" %>
          <br>
-         <%= f.text_field :npi %><p id="npi-confrim">Invalid NPI Number</p>
+         <%= f.text_field :npi %><p>Forgot your NPI number?</p>
        </p>
      </div>
       <div class="col-sm-2">
