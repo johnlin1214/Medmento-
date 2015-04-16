@@ -13,3 +13,11 @@
 .center {
   text-align: center;
 }
+
+.sign-in-form {
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
