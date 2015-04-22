@@ -61,12 +61,13 @@
        <p>
          <%= f.label :npi, "Enter A Valid NPI Number", :id => "npi-confrim" %>
          <br>
-         <%= f.text_field :npi %><p>Forgot your NPI number?</p>
+         <%= f.text_field :npi %><p id='npi-open-search'><a id='npi-open-search' href="#">Forgot your NPI number?</a>
+</p>
        </p>
      </div>
       <div class="col-sm-2">
        <p>
-        <%= f.submit %>
+        <%= f.submit :class => "btn btn-default" %>
        </p>
      </div>
   <% end %>

@@ -2,6 +2,7 @@ $(function() {
   $('#attendant_npi').on('keyup', validateNpiNumber);
   $('#npi-name-lookup').on('submit', lookUpNpiNumber);
   $('#search-table').on('click', '.npi-select', addSelectedNPInumber)
+  $('body').on('click', '#npi-open-search', openNpiSearchBox)
 });
 
 function validateNpiNumber() {
@@ -48,6 +49,10 @@ function addSelectedNPInumber() {
   });
 }
 
+function openNpiSearchBox() {
+  console.log('cicking')
+  // $('.npi-search-bar').slideToggle();
+}
 
 // 1013903475
 // 101390347
