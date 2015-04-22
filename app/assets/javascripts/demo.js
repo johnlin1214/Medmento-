@@ -49,9 +49,9 @@ function addSelectedNPInumber() {
   });
 }
 
-function openNpiSearchBox() {
-  console.log('cicking')
-  // $('.npi-search-bar').slideToggle();
+function openNpiSearchBox(evt) {
+  evt.preventDefault();
+  $('.npi-search-bar').slideToggle();
 }
 
 // 1013903475
