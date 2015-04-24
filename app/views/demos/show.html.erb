@@ -7,7 +7,7 @@
 <div class="container panel">
   <div class="row">
     <div class="col-sm-12">
-      <h2>Demo: <%= @demo.title %></h2>
+      <h1 class="center karla">Demo: <%= @demo.title %></h1>
     </div>
   </div>
 </div>
@@ -38,7 +38,9 @@
 <div class="container panel sign-in-form">
   <div class="row">
     <div class="attendant-form">
+      <h3 id="sign-in-header" class="libre">Please Sign in Below</h3>
       <%= form_for [@demo, @demo.attendants.build] do |f| %>
+
       <div class="col-sm-2">
         <p>
           <%= f.label :first_name %><br>
@@ -104,7 +106,7 @@
 
 
 <div class="container table-responsive">
-  <h3 class="center">Signed In Attendants</h3>
+  <h2 class="libre">Signed In Attendants</h2>
   <table class="table">
     <thead>
       <tr>
