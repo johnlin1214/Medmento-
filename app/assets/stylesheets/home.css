@@ -29,3 +29,16 @@
 .create-attendant-btn {
   margin-top: 1.7em;
 }
+
+.karla {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+}
+
+.libre {
+  font-family: 'Libre Baskerville', serif;
+}
+
+#sign-in-header {
+  margin-left: 0.8em;
+}
