@@ -41753,3 +41753,1169 @@ Processing by DemosController#show as HTML
   [1m[36mAttendant Load (0.1ms)[0m  [1mSELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC[0m  [["demo_id", 5]]
   Rendered demos/show.html.erb within layouts/application (4.7ms)
 Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-04-24 17:11:01 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 872ms (Views: 860.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/demos/5" for ::1 at 2015-04-24 17:11:05 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAttendant Load (0.3ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 5]]
+  Rendered demos/show.html.erb within layouts/application (303.3ms)
+Completed 200 OK in 393ms (Views: 331.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/demos/5" for ::1 at 2015-04-24 17:11:27 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 5]]
+  Rendered demos/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/attendants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/home.self-522dbbe4d06f5d952245f994030cc68f2639d0c449dee4faa3ef79da9227999d.css?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/demos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/attendants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/demo.self-20b54853cee953b1ac4dbead4936a64c71d2d3d9b1f2afc3e8173843913eb734.js?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/demos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-24 17:11:27 -0700
+
+
+Started GET "/" for ::1 at 2015-04-25 12:58:32 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.6ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 360ms (Views: 344.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/demos" for ::1 at 2015-04-25 12:59:31 -0700
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3x3+HMyaAEae01zJWiPA21ax/ujwk/5SvYyr+X/cJy3QMfhoF18vx/s+L2ex+WdofWG0RamXIS18JSDZ9rcPBA==", "demo"=>{"title"=>"Nyquil - Demo "}, "commit"=>"New Demo"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Nyquil - Demo "], ["created_at", "2015-04-25 19:59:31.639576"], ["updated_at", "2015-04-25 19:59:31.639576"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-04-25 12:59:31 -0700
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/demos/6" for ::1 at 2015-04-25 12:59:33 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttendant Load (0.5ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (287.5ms)
+Completed 200 OK in 382ms (Views: 311.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/demos/6/attendants" for ::1 at 2015-04-25 13:01:42 -0700
+Processing by AttendantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"INwMl5AWG53r20NE+yT2hVWcLfoHShidJdkQEHsy4wkv8ArjS9M0HI42MOoQ/lE2fkxnV15Ox+LkcJsw8lnLIA==", "attendant"=>{"first_name"=>"John", "last_name"=>"Abendano", "email"=>"johnA@gmail.com", "npi"=>"1154719607"}, "commit"=>"Create Attendant", "demo_id"=>"6"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "demo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Abendano"], ["email", "johnA@gmail.com"], ["npi", 1154719607], ["demo_id", 6], ["created_at", "2015-04-25 20:01:42.694764"], ["updated_at", "2015-04-25 20:01:42.694764"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/demos/6
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/demos/6" for ::1 at 2015-04-25 13:01:42 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/demos/6/attendants" for ::1 at 2015-04-25 13:02:23 -0700
+Processing by AttendantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YHylooV69hB6I/po9nLZ+oaKD6PMvNbGAr1g65ieXYNvUKPWXr/ZkR/OicYdqH5JrVpFDpW4CbnDFOvLEfV1qg==", "attendant"=>{"first_name"=>"John", "last_name"=>"Acosta", "email"=>"JohnAcosta@gmail.com", "npi"=>"1821266677"}, "commit"=>"Create Attendant", "demo_id"=>"6"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "demo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Acosta"], ["email", "JohnAcosta@gmail.com"], ["npi", 1821266677], ["demo_id", 6], ["created_at", "2015-04-25 20:02:23.617228"], ["updated_at", "2015-04-25 20:02:23.617228"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/demos/6
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/demos/6" for ::1 at 2015-04-25 13:02:23 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-04-25 13:02:29 -0700
+Processing by DemosController#index as HTML
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT "demos".* FROM "demos"  ORDER BY created_at DESC[0m
+  Rendered demos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDemos (20150404064448)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "demos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404064448"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateAttendants (20150404074111)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "attendants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "npi" integer(8), "demo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_attendants_on_demo_id" ON "attendants" ("demo_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404074111"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150405201525"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Hodkiewicz, Adams and Wisoky"], ["created_at", "2015-04-25 20:02:48.215414"], ["updated_at", "2015-04-25 20:02:48.215414"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "gayle.west"], ["last_name", "White"], ["email", "josianne_streich@gmail.com"], ["npi", 4079338596], ["created_at", "2015-04-25 20:02:48.226412"], ["updated_at", "2015-04-25 20:02:48.226412"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:02:48.236453"], ["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "shana"], ["last_name", "Bergstrom"], ["email", "vincenzo@hotmail.com"], ["npi", 4396239403], ["created_at", "2015-04-25 20:02:48.241045"], ["updated_at", "2015-04-25 20:02:48.241045"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:02:48.243169"], ["id", 2]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "rod.robel"], ["last_name", "Flatley"], ["email", "eldora_gleason@gmail.com"], ["npi", 3081583254], ["created_at", "2015-04-25 20:02:48.245366"], ["updated_at", "2015-04-25 20:02:48.245366"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:02:48.247499"], ["id", 3]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "pascale"], ["last_name", "Little"], ["email", "anabel@hotmail.com"], ["npi", 9512884684], ["created_at", "2015-04-25 20:02:48.249377"], ["updated_at", "2015-04-25 20:02:48.249377"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:02:48.251042"], ["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "donnie.green"], ["last_name", "Stanton"], ["email", "wilford_boehm@gmail.com"], ["npi", 8642506861], ["created_at", "2015-04-25 20:02:48.252894"], ["updated_at", "2015-04-25 20:02:48.252894"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:02:48.254728"], ["id", 5]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "aditya"], ["last_name", "Strosin"], ["email", "damian.williamson@yahoo.com"], ["npi", 9632776001], ["created_at", "2015-04-25 20:02:48.256409"], ["updated_at", "2015-04-25 20:02:48.256409"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:02:48.258106"], ["id", 6]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "adam"], ["last_name", "Turcotte"], ["email", "chaya.batz@yahoo.com"], ["npi", 3494580542], ["created_at", "2015-04-25 20:02:48.259861"], ["updated_at", "2015-04-25 20:02:48.259861"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:02:48.261514"], ["id", 7]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Graham-Bailey"], ["created_at", "2015-04-25 20:02:48.263402"], ["updated_at", "2015-04-25 20:02:48.263402"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "weldon_gleason"], ["last_name", "Hayes"], ["email", "keshaun_botsford@gmail.com"], ["npi", 9551797629], ["created_at", "2015-04-25 20:02:48.265151"], ["updated_at", "2015-04-25 20:02:48.265151"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:02:48.267184"], ["id", 8]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "rosetta.wilkinson"], ["last_name", "Russel"], ["email", "laurine.davis@gmail.com"], ["npi", 2918378352], ["created_at", "2015-04-25 20:02:48.268879"], ["updated_at", "2015-04-25 20:02:48.268879"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:02:48.270658"], ["id", 9]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "nicholas"], ["last_name", "Donnelly"], ["email", "elwin.gerlach@yahoo.com"], ["npi", 8452415828], ["created_at", "2015-04-25 20:02:48.272440"], ["updated_at", "2015-04-25 20:02:48.272440"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:02:48.274343"], ["id", 10]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "cicero"], ["last_name", "O'Hara"], ["email", "gielle_haag@gmail.com"], ["npi", 4539732546], ["created_at", "2015-04-25 20:02:48.276128"], ["updated_at", "2015-04-25 20:02:48.276128"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:02:48.278014"], ["id", 11]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "alysha"], ["last_name", "Ferry"], ["email", "doug@gmail.com"], ["npi", 2804464107], ["created_at", "2015-04-25 20:02:48.279800"], ["updated_at", "2015-04-25 20:02:48.279800"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:02:48.281511"], ["id", 12]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "mariano_cummings"], ["last_name", "Ritchie"], ["email", "christy@hotmail.com"], ["npi", 4768592285], ["created_at", "2015-04-25 20:02:48.283266"], ["updated_at", "2015-04-25 20:02:48.283266"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:02:48.284849"], ["id", 13]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "karelle.kris"], ["last_name", "Larson"], ["email", "audreanne.grant@gmail.com"], ["npi", 1522815831], ["created_at", "2015-04-25 20:02:48.286534"], ["updated_at", "2015-04-25 20:02:48.286534"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:02:48.288389"], ["id", 14]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Hand, Ebert and Hand"], ["created_at", "2015-04-25 20:02:48.290130"], ["updated_at", "2015-04-25 20:02:48.290130"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "alex"], ["last_name", "Connelly"], ["email", "david@hotmail.com"], ["npi", 9327301436], ["created_at", "2015-04-25 20:02:48.291867"], ["updated_at", "2015-04-25 20:02:48.291867"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:02:48.294001"], ["id", 15]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "danial"], ["last_name", "Corwin"], ["email", "josh.kutch@gmail.com"], ["npi", 2793478548], ["created_at", "2015-04-25 20:02:48.295928"], ["updated_at", "2015-04-25 20:02:48.295928"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:02:48.297793"], ["id", 16]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "reyes"], ["last_name", "Rempel"], ["email", "woodrow_ledner@yahoo.com"], ["npi", 4837810598], ["created_at", "2015-04-25 20:02:48.299467"], ["updated_at", "2015-04-25 20:02:48.299467"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:02:48.301174"], ["id", 17]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "kaleigh.romaguera"], ["last_name", "O'Reilly"], ["email", "ahmad@gmail.com"], ["npi", 6031677809], ["created_at", "2015-04-25 20:02:48.302818"], ["updated_at", "2015-04-25 20:02:48.302818"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:02:48.304570"], ["id", 18]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "kasandra_conn"], ["last_name", "Lynch"], ["email", "kayla.nienow@gmail.com"], ["npi", 7899959765], ["created_at", "2015-04-25 20:02:48.306348"], ["updated_at", "2015-04-25 20:02:48.306348"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:02:48.308170"], ["id", 19]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "shanie"], ["last_name", "Stoltenberg"], ["email", "virginie@hotmail.com"], ["npi", 3081106492], ["created_at", "2015-04-25 20:02:48.309844"], ["updated_at", "2015-04-25 20:02:48.309844"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:02:48.311743"], ["id", 20]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "patricia"], ["last_name", "Hodkiewicz"], ["email", "delia@gmail.com"], ["npi", 5134833581], ["created_at", "2015-04-25 20:02:48.313558"], ["updated_at", "2015-04-25 20:02:48.313558"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:02:48.315320"], ["id", 21]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Johnson-Littel"], ["created_at", "2015-04-25 20:02:48.317124"], ["updated_at", "2015-04-25 20:02:48.317124"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "cyril"], ["last_name", "Feest"], ["email", "stephanie@yahoo.com"], ["npi", 2272475792], ["created_at", "2015-04-25 20:02:48.318819"], ["updated_at", "2015-04-25 20:02:48.318819"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:02:48.320727"], ["id", 22]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "christop_fay"], ["last_name", "Schowalter"], ["email", "fritz.ohara@hotmail.com"], ["npi", 6206727298], ["created_at", "2015-04-25 20:02:48.322378"], ["updated_at", "2015-04-25 20:02:48.322378"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:02:48.324024"], ["id", 23]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "lavina"], ["last_name", "Ortiz"], ["email", "devante_kerluke@yahoo.com"], ["npi", 2130195201], ["created_at", "2015-04-25 20:02:48.325613"], ["updated_at", "2015-04-25 20:02:48.325613"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:02:48.327384"], ["id", 24]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "dameon"], ["last_name", "Pollich"], ["email", "maureen@yahoo.com"], ["npi", 7758804581], ["created_at", "2015-04-25 20:02:48.329023"], ["updated_at", "2015-04-25 20:02:48.329023"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:02:48.330692"], ["id", 25]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "yeenia.wilderman"], ["last_name", "Frami"], ["email", "emmett.jones@yahoo.com"], ["npi", 9585625740], ["created_at", "2015-04-25 20:02:48.332335"], ["updated_at", "2015-04-25 20:02:48.332335"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:02:48.334017"], ["id", 26]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "winifred"], ["last_name", "Jakubowski"], ["email", "kianna.mraz@hotmail.com"], ["npi", 6814463713], ["created_at", "2015-04-25 20:02:48.335665"], ["updated_at", "2015-04-25 20:02:48.335665"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:02:48.337419"], ["id", 27]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "desmond"], ["last_name", "Mueller"], ["email", "lavonne@yahoo.com"], ["npi", 7333400564], ["created_at", "2015-04-25 20:02:48.339039"], ["updated_at", "2015-04-25 20:02:48.339039"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:02:48.340694"], ["id", 28]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Huels, Cronin and Schowalter"], ["created_at", "2015-04-25 20:02:48.342309"], ["updated_at", "2015-04-25 20:02:48.342309"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "imani_hermiston"], ["last_name", "Rau"], ["email", "geraldine@hotmail.com"], ["npi", 8568125263], ["created_at", "2015-04-25 20:02:48.344009"], ["updated_at", "2015-04-25 20:02:48.344009"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:02:48.345904"], ["id", 29]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "rylan"], ["last_name", "Corwin"], ["email", "rachael@hotmail.com"], ["npi", 5124907144], ["created_at", "2015-04-25 20:02:48.347487"], ["updated_at", "2015-04-25 20:02:48.347487"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:02:48.349272"], ["id", 30]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "grayce_schroeder"], ["last_name", "Bechtelar"], ["email", "jimmy@gmail.com"], ["npi", 6403583272], ["created_at", "2015-04-25 20:02:48.350857"], ["updated_at", "2015-04-25 20:02:48.350857"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:02:48.352742"], ["id", 31]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "kaandra_monahan"], ["last_name", "Crooks"], ["email", "kaitlyn@yahoo.com"], ["npi", 7307318841], ["created_at", "2015-04-25 20:02:48.354455"], ["updated_at", "2015-04-25 20:02:48.354455"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:02:48.356121"], ["id", 32]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "myrtis_brekke"], ["last_name", "Schamberger"], ["email", "addie_rosenbaum@yahoo.com"], ["npi", 7786416694], ["created_at", "2015-04-25 20:02:48.357730"], ["updated_at", "2015-04-25 20:02:48.357730"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:02:48.359355"], ["id", 33]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "jorge.ohara"], ["last_name", "Zboncak"], ["email", "jey@hotmail.com"], ["npi", 1055674405], ["created_at", "2015-04-25 20:02:48.361071"], ["updated_at", "2015-04-25 20:02:48.361071"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:02:48.362679"], ["id", 34]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "hank"], ["last_name", "Jones"], ["email", "dominique_effertz@hotmail.com"], ["npi", 3952555778], ["created_at", "2015-04-25 20:02:48.364290"], ["updated_at", "2015-04-25 20:02:48.364290"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:02:48.366026"], ["id", 35]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2015-04-25 13:02:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 298ms (Views: 286.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/attendants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/demos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/home.self-522dbbe4d06f5d952245f994030cc68f2639d0c449dee4faa3ef79da9227999d.css?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/attendants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/demo.self-20b54853cee953b1ac4dbead4936a64c71d2d3d9b1f2afc3e8173843913eb734.js?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/demos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-25 13:02:57 -0700
+
+
+Started POST "/demos" for ::1 at 2015-04-25 13:08:56 -0700
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LQJOlGQeJKOOTCrME3H2503hJ+Jj+xxa1mG6wh81Rr0iLkjgv9sLIuuhWWL4q1FUZjFtTzr/wyUXyDHill5ulA==", "demo"=>{"title"=>"Nyquil - Demo "}, "commit"=>"New Demo"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Nyquil - Demo "], ["created_at", "2015-04-25 20:08:56.656611"], ["updated_at", "2015-04-25 20:08:56.656611"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-04-25 13:08:56 -0700
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/demos/6" for ::1 at 2015-04-25 13:08:58 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttendant Load (0.2ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (368.4ms)
+Completed 200 OK in 408ms (Views: 393.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/demos" for ::1 at 2015-04-25 13:10:57 -0700
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NUMhWmhQO150QPLEAfyv61RURdSn2YEjlFzpSrDHPVU6bycus5UU3xGtgWrqJghYf4QPef7dXlxV9WJqOawVfA==", "demo"=>{"title"=>"Tylenol -Demo "}, "commit"=>"New Demo"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Tylenol -Demo "], ["created_at", "2015-04-25 20:10:57.279731"], ["updated_at", "2015-04-25 20:10:57.279731"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2015-04-25 13:10:57 -0700
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/demos/7" for ::1 at 2015-04-25 13:10:59 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 7]]
+  Rendered demos/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/demos/7/attendants" for ::1 at 2015-04-25 13:11:37 -0700
+Processing by AttendantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x77M7LilWomDIBl905/aEwl6OcgdmkC50LbWcavDytrIksqYY2B1CObNatM4RX2gIqpzZUSen8YRH11RIqji8w==", "attendant"=>{"first_name"=>"John", "last_name"=>"Abendano", "email"=>"johnA@gmail.com", "npi"=>"1154719607"}, "commit"=>"Create Attendant", "demo_id"=>"7"}
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "demo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Abendano"], ["email", "johnA@gmail.com"], ["npi", 1154719607], ["demo_id", 7], ["created_at", "2015-04-25 20:11:37.723590"], ["updated_at", "2015-04-25 20:11:37.723590"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/demos/7
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/demos/7" for ::1 at 2015-04-25 13:11:37 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mAttendant Load (0.2ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 7]]
+  Rendered demos/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/demos/7/attendants" for ::1 at 2015-04-25 13:12:16 -0700
+Processing by AttendantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DSbqEZAfUCVclQCLYKyT0l3KyyxU0K5MsIIwWdXIsMYCCuxlS9p/pDl4cyWLdjRhdhqBgQ3UcTNxK7t5XKOY7w==", "attendant"=>{"first_name"=>"John", "last_name"=>"Acosta", "email"=>"JohnAcosta@gmail.com", "npi"=>"1821266677"}, "commit"=>"Create Attendant", "demo_id"=>"7"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "demo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Acosta"], ["email", "JohnAcosta@gmail.com"], ["npi", 1821266677], ["demo_id", 7], ["created_at", "2015-04-25 20:12:16.473838"], ["updated_at", "2015-04-25 20:12:16.473838"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/demos/7
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/demos/7" for ::1 at 2015-04-25 13:12:16 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mAttendant Load (0.3ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 7]]
+  Rendered demos/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 119ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDemos (20150404064448)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "demos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404064448"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateAttendants (20150404074111)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "attendants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "npi" integer(8), "demo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_attendants_on_demo_id" ON "attendants" ("demo_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404074111"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150405201525"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "O'Hara Group"], ["created_at", "2015-04-25 20:14:52.583460"], ["updated_at", "2015-04-25 20:14:52.583460"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "arely.weimann"], ["last_name", "Welch"], ["email", "emil@gmail.com"], ["npi", 4779786833], ["created_at", "2015-04-25 20:14:52.594823"], ["updated_at", "2015-04-25 20:14:52.594823"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:52.605436"], ["id", 1]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "mireille_gerhold"], ["last_name", "Will"], ["email", "kaci@hotmail.com"], ["npi", 3684186549], ["created_at", "2015-04-25 20:14:52.610696"], ["updated_at", "2015-04-25 20:14:52.610696"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:52.613279"], ["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "jayden"], ["last_name", "Erdman"], ["email", "christelle.mills@yahoo.com"], ["npi", 2268287417], ["created_at", "2015-04-25 20:14:52.615577"], ["updated_at", "2015-04-25 20:14:52.615577"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:52.617488"], ["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "monroe.goyette"], ["last_name", "Sawayn"], ["email", "jerod.pollich@yahoo.com"], ["npi", 7655732398], ["created_at", "2015-04-25 20:14:52.619282"], ["updated_at", "2015-04-25 20:14:52.619282"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:52.621380"], ["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "karley"], ["last_name", "Emard"], ["email", "shakira@yahoo.com"], ["npi", 8186953506], ["created_at", "2015-04-25 20:14:52.623604"], ["updated_at", "2015-04-25 20:14:52.623604"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:52.625740"], ["id", 5]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "eleazar.fay"], ["last_name", "McDermott"], ["email", "chad@yahoo.com"], ["npi", 9777435364], ["created_at", "2015-04-25 20:14:52.627628"], ["updated_at", "2015-04-25 20:14:52.627628"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:52.629666"], ["id", 6]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "ladarius.wyman"], ["last_name", "Padberg"], ["email", "jack@yahoo.com"], ["npi", 1072596988], ["created_at", "2015-04-25 20:14:52.631782"], ["updated_at", "2015-04-25 20:14:52.631782"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:52.634011"], ["id", 7]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Oberbrunner-Becker"], ["created_at", "2015-04-25 20:14:52.636297"], ["updated_at", "2015-04-25 20:14:52.636297"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "vito"], ["last_name", "Veum"], ["email", "darrion@yahoo.com"], ["npi", 6419358278], ["created_at", "2015-04-25 20:14:52.638611"], ["updated_at", "2015-04-25 20:14:52.638611"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:52.640856"], ["id", 8]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "jordi_waters"], ["last_name", "Cole"], ["email", "neal@yahoo.com"], ["npi", 2423878135], ["created_at", "2015-04-25 20:14:52.643212"], ["updated_at", "2015-04-25 20:14:52.643212"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:52.645365"], ["id", 9]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "rosendo.smitham"], ["last_name", "Kemmer"], ["email", "madonna.dibbert@hotmail.com"], ["npi", 1296658165], ["created_at", "2015-04-25 20:14:52.647374"], ["updated_at", "2015-04-25 20:14:52.647374"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:52.649281"], ["id", 10]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "diana"], ["last_name", "Lehner"], ["email", "rosalyn@gmail.com"], ["npi", 9448611485], ["created_at", "2015-04-25 20:14:52.651450"], ["updated_at", "2015-04-25 20:14:52.651450"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:52.653516"], ["id", 11]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "mina"], ["last_name", "Ledner"], ["email", "jalen@yahoo.com"], ["npi", 1933465755], ["created_at", "2015-04-25 20:14:52.655421"], ["updated_at", "2015-04-25 20:14:52.655421"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:52.657481"], ["id", 12]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "lyla"], ["last_name", "Dietrich"], ["email", "antonia.spencer@yahoo.com"], ["npi", 4772575796], ["created_at", "2015-04-25 20:14:52.659637"], ["updated_at", "2015-04-25 20:14:52.659637"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:52.661701"], ["id", 13]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "samir"], ["last_name", "Collins"], ["email", "bennie_wilkinson@yahoo.com"], ["npi", 6907419582], ["created_at", "2015-04-25 20:14:52.663630"], ["updated_at", "2015-04-25 20:14:52.663630"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:52.665446"], ["id", 14]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Goldner, Miller and Hettinger"], ["created_at", "2015-04-25 20:14:52.667151"], ["updated_at", "2015-04-25 20:14:52.667151"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "bridie_batz"], ["last_name", "Lubowitz"], ["email", "cooper_baumbach@hotmail.com"], ["npi", 1275599290], ["created_at", "2015-04-25 20:14:52.669028"], ["updated_at", "2015-04-25 20:14:52.669028"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:52.671192"], ["id", 15]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "ryann_mayer"], ["last_name", "Runolfsson"], ["email", "vidal_volkman@yahoo.com"], ["npi", 2969898223], ["created_at", "2015-04-25 20:14:52.672831"], ["updated_at", "2015-04-25 20:14:52.672831"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:52.674497"], ["id", 16]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "aliya_hills"], ["last_name", "Welch"], ["email", "eden_miller@gmail.com"], ["npi", 9989172028], ["created_at", "2015-04-25 20:14:52.676209"], ["updated_at", "2015-04-25 20:14:52.676209"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:52.678126"], ["id", 17]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "laury_oreilly"], ["last_name", "Gorczany"], ["email", "dominic@hotmail.com"], ["npi", 8820599315], ["created_at", "2015-04-25 20:14:52.679918"], ["updated_at", "2015-04-25 20:14:52.679918"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:52.681775"], ["id", 18]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "kailee.cruickshank"], ["last_name", "Harvey"], ["email", "kennedi@hotmail.com"], ["npi", 8047741377], ["created_at", "2015-04-25 20:14:52.683357"], ["updated_at", "2015-04-25 20:14:52.683357"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:52.684899"], ["id", 19]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "carey"], ["last_name", "Tremblay"], ["email", "amya_walker@gmail.com"], ["npi", 7001707440], ["created_at", "2015-04-25 20:14:52.686551"], ["updated_at", "2015-04-25 20:14:52.686551"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:52.688206"], ["id", 20]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "tiffany"], ["last_name", "Torp"], ["email", "cordelia_kertzmann@gmail.com"], ["npi", 3414547300], ["created_at", "2015-04-25 20:14:52.689822"], ["updated_at", "2015-04-25 20:14:52.689822"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:52.691587"], ["id", 21]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Torphy Inc"], ["created_at", "2015-04-25 20:14:52.693226"], ["updated_at", "2015-04-25 20:14:52.693226"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "nils_johnson"], ["last_name", "Frami"], ["email", "eleonore@hotmail.com"], ["npi", 1282527143], ["created_at", "2015-04-25 20:14:52.694901"], ["updated_at", "2015-04-25 20:14:52.694901"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:52.696760"], ["id", 22]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "alejandra"], ["last_name", "Pouros"], ["email", "iliana.jast@hotmail.com"], ["npi", 2337233365], ["created_at", "2015-04-25 20:14:52.698372"], ["updated_at", "2015-04-25 20:14:52.698372"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:52.699939"], ["id", 23]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "brisa.damore"], ["last_name", "Mertz"], ["email", "keith_strosin@hotmail.com"], ["npi", 4734773404], ["created_at", "2015-04-25 20:14:52.701470"], ["updated_at", "2015-04-25 20:14:52.701470"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:52.703218"], ["id", 24]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "anne"], ["last_name", "Bailey"], ["email", "vinnie.lockman@gmail.com"], ["npi", 7869871118], ["created_at", "2015-04-25 20:14:52.704942"], ["updated_at", "2015-04-25 20:14:52.704942"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:52.706895"], ["id", 25]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "helmer"], ["last_name", "Reinger"], ["email", "alek@hotmail.com"], ["npi", 4560388679], ["created_at", "2015-04-25 20:14:52.708799"], ["updated_at", "2015-04-25 20:14:52.708799"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:52.710986"], ["id", 26]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "mathias"], ["last_name", "Trantow"], ["email", "kamille.swaniawski@gmail.com"], ["npi", 7537886649], ["created_at", "2015-04-25 20:14:52.713002"], ["updated_at", "2015-04-25 20:14:52.713002"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:52.714920"], ["id", 27]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "christa"], ["last_name", "Fadel"], ["email", "elena_sanford@yahoo.com"], ["npi", 2372999271], ["created_at", "2015-04-25 20:14:52.716628"], ["updated_at", "2015-04-25 20:14:52.716628"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:52.718426"], ["id", 28]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Larkin LLC"], ["created_at", "2015-04-25 20:14:52.720210"], ["updated_at", "2015-04-25 20:14:52.720210"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "brandon"], ["last_name", "Friesen"], ["email", "tierra@yahoo.com"], ["npi", 3784413704], ["created_at", "2015-04-25 20:14:52.721869"], ["updated_at", "2015-04-25 20:14:52.721869"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:52.723812"], ["id", 29]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "myron.rice"], ["last_name", "Stiedemann"], ["email", "connor@yahoo.com"], ["npi", 8287396463], ["created_at", "2015-04-25 20:14:52.725636"], ["updated_at", "2015-04-25 20:14:52.725636"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:52.727434"], ["id", 30]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "lesley"], ["last_name", "Kerluke"], ["email", "mathias@gmail.com"], ["npi", 6492950600], ["created_at", "2015-04-25 20:14:52.729056"], ["updated_at", "2015-04-25 20:14:52.729056"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:52.730612"], ["id", 31]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "velva"], ["last_name", "Schaden"], ["email", "shana.ryan@gmail.com"], ["npi", 4905632862], ["created_at", "2015-04-25 20:14:52.732175"], ["updated_at", "2015-04-25 20:14:52.732175"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:52.733838"], ["id", 32]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "juanita.marks"], ["last_name", "Batz"], ["email", "rebeka@yahoo.com"], ["npi", 5578685645], ["created_at", "2015-04-25 20:14:52.735707"], ["updated_at", "2015-04-25 20:14:52.735707"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:52.737679"], ["id", 33]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "isabella_sporer"], ["last_name", "Zieme"], ["email", "natalia@yahoo.com"], ["npi", 5106921847], ["created_at", "2015-04-25 20:14:52.739498"], ["updated_at", "2015-04-25 20:14:52.739498"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:52.741183"], ["id", 34]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "leonie_hansen"], ["last_name", "Bosco"], ["email", "jeramy@gmail.com"], ["npi", 9239700478], ["created_at", "2015-04-25 20:14:52.743009"], ["updated_at", "2015-04-25 20:14:52.743009"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:52.744885"], ["id", 35]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDemos (20150404064448)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "demos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150404064448"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateAttendants (20150404074111)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "attendants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "npi" integer(8), "demo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_attendants_on_demo_id" ON "attendants" ("demo_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150404074111"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToAttendantNpi (20150405201525)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_attendants_on_npi" ON "attendants" ("npi")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150405201525"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_npi' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_demo_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Schultz and Sons"], ["created_at", "2015-04-25 20:14:55.664655"], ["updated_at", "2015-04-25 20:14:55.664655"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "toney.stiedemann"], ["last_name", "McLaughlin"], ["email", "melya_ziemann@gmail.com"], ["npi", 8293765706], ["created_at", "2015-04-25 20:14:55.674319"], ["updated_at", "2015-04-25 20:14:55.674319"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:55.684685"], ["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "jamar"], ["last_name", "Konopelski"], ["email", "alf_mills@gmail.com"], ["npi", 4241676067], ["created_at", "2015-04-25 20:14:55.689454"], ["updated_at", "2015-04-25 20:14:55.689454"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:55.691573"], ["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "preston_macgyver"], ["last_name", "Bartell"], ["email", "marilou_kreiger@gmail.com"], ["npi", 7792266033], ["created_at", "2015-04-25 20:14:55.693978"], ["updated_at", "2015-04-25 20:14:55.693978"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:55.696087"], ["id", 3]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "sandra_bartell"], ["last_name", "Satterfield"], ["email", "simeon.jenkins@yahoo.com"], ["npi", 4175739129], ["created_at", "2015-04-25 20:14:55.698119"], ["updated_at", "2015-04-25 20:14:55.698119"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:55.700031"], ["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "kamryn_jast"], ["last_name", "Pacocha"], ["email", "leola_jones@hotmail.com"], ["npi", 3925098901], ["created_at", "2015-04-25 20:14:55.701854"], ["updated_at", "2015-04-25 20:14:55.701854"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:55.703579"], ["id", 5]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "rebekah.huel"], ["last_name", "Langosh"], ["email", "alexandrine@hotmail.com"], ["npi", 9716118902], ["created_at", "2015-04-25 20:14:55.705280"], ["updated_at", "2015-04-25 20:14:55.705280"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:55.706946"], ["id", 6]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "gerry"], ["last_name", "Weber"], ["email", "karli.hilpert@hotmail.com"], ["npi", 9999689499], ["created_at", "2015-04-25 20:14:55.708646"], ["updated_at", "2015-04-25 20:14:55.708646"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 1], ["updated_at", "2015-04-25 20:14:55.710414"], ["id", 7]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Becker Inc"], ["created_at", "2015-04-25 20:14:55.712182"], ["updated_at", "2015-04-25 20:14:55.712182"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "aidan_blick"], ["last_name", "Rutherford"], ["email", "jana.welch@gmail.com"], ["npi", 9696888350], ["created_at", "2015-04-25 20:14:55.714103"], ["updated_at", "2015-04-25 20:14:55.714103"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:55.716257"], ["id", 8]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "nona.prosacco"], ["last_name", "Skiles"], ["email", "alexanne.doyle@gmail.com"], ["npi", 3923659443], ["created_at", "2015-04-25 20:14:55.717917"], ["updated_at", "2015-04-25 20:14:55.717917"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:55.719697"], ["id", 9]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "chadd_waters"], ["last_name", "VonRueden"], ["email", "edwardo@hotmail.com"], ["npi", 9308955808], ["created_at", "2015-04-25 20:14:55.721288"], ["updated_at", "2015-04-25 20:14:55.721288"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:55.722924"], ["id", 10]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "wilford"], ["last_name", "Bartell"], ["email", "bart_rohan@gmail.com"], ["npi", 4536419890], ["created_at", "2015-04-25 20:14:55.724574"], ["updated_at", "2015-04-25 20:14:55.724574"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:55.726261"], ["id", 11]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "lesley"], ["last_name", "Walter"], ["email", "dewayne@hotmail.com"], ["npi", 1185263394], ["created_at", "2015-04-25 20:14:55.728043"], ["updated_at", "2015-04-25 20:14:55.728043"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:55.729845"], ["id", 12]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "darwin.bashirian"], ["last_name", "Friesen"], ["email", "muhammad@gmail.com"], ["npi", 5782204661], ["created_at", "2015-04-25 20:14:55.731607"], ["updated_at", "2015-04-25 20:14:55.731607"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:55.733487"], ["id", 13]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "nadia_gleichner"], ["last_name", "Hintz"], ["email", "xander.roob@gmail.com"], ["npi", 6257966830], ["created_at", "2015-04-25 20:14:55.735339"], ["updated_at", "2015-04-25 20:14:55.735339"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 2], ["updated_at", "2015-04-25 20:14:55.737207"], ["id", 14]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Schmeler-Mueller"], ["created_at", "2015-04-25 20:14:55.738930"], ["updated_at", "2015-04-25 20:14:55.738930"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "deonte.zboncak"], ["last_name", "Beahan"], ["email", "chauncey_wiza@gmail.com"], ["npi", 8275775018], ["created_at", "2015-04-25 20:14:55.740865"], ["updated_at", "2015-04-25 20:14:55.740865"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:55.742827"], ["id", 15]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "gaston.weimann"], ["last_name", "McLaughlin"], ["email", "keanu@hotmail.com"], ["npi", 3427150089], ["created_at", "2015-04-25 20:14:55.744462"], ["updated_at", "2015-04-25 20:14:55.744462"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:55.746105"], ["id", 16]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "eloisa_vandervort"], ["last_name", "Schumm"], ["email", "amie_huels@hotmail.com"], ["npi", 8748353231], ["created_at", "2015-04-25 20:14:55.747802"], ["updated_at", "2015-04-25 20:14:55.747802"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:55.749740"], ["id", 17]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "andre_franecki"], ["last_name", "Erdman"], ["email", "brianne.braun@yahoo.com"], ["npi", 8361111365], ["created_at", "2015-04-25 20:14:55.751561"], ["updated_at", "2015-04-25 20:14:55.751561"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:55.753582"], ["id", 18]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "gilberto"], ["last_name", "Crooks"], ["email", "keven_casper@hotmail.com"], ["npi", 4355420372], ["created_at", "2015-04-25 20:14:55.755842"], ["updated_at", "2015-04-25 20:14:55.755842"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:55.757829"], ["id", 19]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "audra.haley"], ["last_name", "Erdman"], ["email", "alexandrine.klein@gmail.com"], ["npi", 6388778029], ["created_at", "2015-04-25 20:14:55.759730"], ["updated_at", "2015-04-25 20:14:55.759730"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:55.761764"], ["id", 20]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "elizabeth"], ["last_name", "Lakin"], ["email", "percival.bechtelar@hotmail.com"], ["npi", 8681421674], ["created_at", "2015-04-25 20:14:55.763718"], ["updated_at", "2015-04-25 20:14:55.763718"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 3], ["updated_at", "2015-04-25 20:14:55.765647"], ["id", 21]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Ferry Inc"], ["created_at", "2015-04-25 20:14:55.767364"], ["updated_at", "2015-04-25 20:14:55.767364"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "salvador.stracke"], ["last_name", "Gottlieb"], ["email", "rodrigo@gmail.com"], ["npi", 6676497172], ["created_at", "2015-04-25 20:14:55.769205"], ["updated_at", "2015-04-25 20:14:55.769205"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:55.771037"], ["id", 22]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "carson"], ["last_name", "Koch"], ["email", "mariano.rowe@gmail.com"], ["npi", 7650266209], ["created_at", "2015-04-25 20:14:55.772809"], ["updated_at", "2015-04-25 20:14:55.772809"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:55.774586"], ["id", 23]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "juliana"], ["last_name", "Rath"], ["email", "jody@gmail.com"], ["npi", 3078856547], ["created_at", "2015-04-25 20:14:55.776291"], ["updated_at", "2015-04-25 20:14:55.776291"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:55.778221"], ["id", 24]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "gloria"], ["last_name", "Gutkowski"], ["email", "jacey.herman@yahoo.com"], ["npi", 7955736080], ["created_at", "2015-04-25 20:14:55.779974"], ["updated_at", "2015-04-25 20:14:55.779974"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:55.781819"], ["id", 25]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "rusty"], ["last_name", "Schumm"], ["email", "bethel@yahoo.com"], ["npi", 3599558579], ["created_at", "2015-04-25 20:14:55.783675"], ["updated_at", "2015-04-25 20:14:55.783675"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:55.785701"], ["id", 26]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "chasity_eichmann"], ["last_name", "Bergstrom"], ["email", "magnolia@gmail.com"], ["npi", 2552950228], ["created_at", "2015-04-25 20:14:55.787358"], ["updated_at", "2015-04-25 20:14:55.787358"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:55.789209"], ["id", 27]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "brennon.keler"], ["last_name", "Braun"], ["email", "lafayette@yahoo.com"], ["npi", 7681398022], ["created_at", "2015-04-25 20:14:55.790891"], ["updated_at", "2015-04-25 20:14:55.790891"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?[0m  [["demo_id", 4], ["updated_at", "2015-04-25 20:14:55.792700"], ["id", 28]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Vandervort, Hegmann and Crooks"], ["created_at", "2015-04-25 20:14:55.794649"], ["updated_at", "2015-04-25 20:14:55.794649"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "yvonne_halvorson"], ["last_name", "Armstrong"], ["email", "danial@gmail.com"], ["npi", 3799253012], ["created_at", "2015-04-25 20:14:55.796774"], ["updated_at", "2015-04-25 20:14:55.796774"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:55.798854"], ["id", 29]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "eric"], ["last_name", "Turner"], ["email", "zella.lindgren@hotmail.com"], ["npi", 4462248843], ["created_at", "2015-04-25 20:14:55.800618"], ["updated_at", "2015-04-25 20:14:55.800618"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:55.802639"], ["id", 30]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "jamie.leannon"], ["last_name", "Denesik"], ["email", "abby@yahoo.com"], ["npi", 8135978563], ["created_at", "2015-04-25 20:14:55.804543"], ["updated_at", "2015-04-25 20:14:55.804543"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:55.806369"], ["id", 31]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "marquis"], ["last_name", "Abbott"], ["email", "griffin@gmail.com"], ["npi", 4831582445], ["created_at", "2015-04-25 20:14:55.807994"], ["updated_at", "2015-04-25 20:14:55.807994"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:55.809748"], ["id", 32]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "dax.hartmann"], ["last_name", "Reinger"], ["email", "furman_corkery@hotmail.com"], ["npi", 3032460027], ["created_at", "2015-04-25 20:14:55.811647"], ["updated_at", "2015-04-25 20:14:55.811647"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:55.813447"], ["id", 33]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "everette"], ["last_name", "Effertz"], ["email", "constantin.gutmann@hotmail.com"], ["npi", 3588207671], ["created_at", "2015-04-25 20:14:55.815232"], ["updated_at", "2015-04-25 20:14:55.815232"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:55.817174"], ["id", 34]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "emanuel_upton"], ["last_name", "Hintz"], ["email", "fannie@gmail.com"], ["npi", 5694788793], ["created_at", "2015-04-25 20:14:55.819214"], ["updated_at", "2015-04-25 20:14:55.819214"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "attendants" SET "demo_id" = ?, "updated_at" = ? WHERE "attendants"."id" = ?  [["demo_id", 5], ["updated_at", "2015-04-25 20:14:55.821047"], ["id", 35]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2015-04-25 13:15:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.2ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 305ms (Views: 288.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/demos" for ::1 at 2015-04-25 13:16:22 -0700
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OQczbULriUsv0BRCFlg6eqgCE3doV/scpKzPslGK7eI2KzUZmS6myko9Z+z9gp3Jg9JZ2jFTJGNlBUSS2OHFyw==", "demo"=>{"title"=>"Tylenol - Demo "}, "commit"=>"New Demo"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "demos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Tylenol - Demo "], ["created_at", "2015-04-25 20:16:22.014493"], ["updated_at", "2015-04-25 20:16:22.014493"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-04-25 13:16:22 -0700
+Processing by DemosController#index as HTML
+  [1m[35mDemo Load (0.3ms)[0m  SELECT "demos".* FROM "demos"  ORDER BY created_at DESC
+  Rendered demos/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/demos/6" for ::1 at 2015-04-25 13:16:24 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDemo Load (0.2ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttendant Load (0.2ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (312.0ms)
+Completed 200 OK in 358ms (Views: 342.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/demos/6/attendants" for ::1 at 2015-04-25 13:17:01 -0700
+Processing by AttendantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X72HBd5Jw6ssbwYHXmcc7zFRRtHHC3Ur59XBwilMJhdQkYFxBYzsKkmCdam1vbtcGoEMfJ4PqlQmfErioCcOPg==", "attendant"=>{"first_name"=>"John", "last_name"=>"Abendano", "email"=>"johnA@gmail.com", "npi"=>"1154719607"}, "commit"=>"Create Attendant", "demo_id"=>"6"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "demo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Abendano"], ["email", "johnA@gmail.com"], ["npi", 1154719607], ["demo_id", 6], ["created_at", "2015-04-25 20:17:01.490839"], ["updated_at", "2015-04-25 20:17:01.490839"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/demos/6
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/demos/6" for ::1 at 2015-04-25 13:17:01 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 119ms (Views: 116.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/demos/6/attendants" for ::1 at 2015-04-25 13:17:40 -0700
+Processing by AttendantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3eP2RUZSHAR00CWO29GoelhiAluIhdkwI14S3RP3WtHSz/AxnZczhRE9ViAwCw/Jc7JI9tGBBk/i95n9mpxy+A==", "attendant"=>{"first_name"=>"John", "last_name"=>"Acosta", "email"=>"JohnAcosta@gmail.com", "npi"=>"1821266677"}, "commit"=>"Create Attendant", "demo_id"=>"6"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "attendants" ("first_name", "last_name", "email", "npi", "demo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Acosta"], ["email", "JohnAcosta@gmail.com"], ["npi", 1821266677], ["demo_id", 6], ["created_at", "2015-04-25 20:17:40.409387"], ["updated_at", "2015-04-25 20:17:40.409387"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/demos/6
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/demos/6" for ::1 at 2015-04-25 13:17:40 -0700
+Processing by DemosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDemo Load (0.1ms)[0m  [1mSELECT  "demos".* FROM "demos" WHERE "demos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mAttendant Load (0.1ms)[0m  SELECT "attendants".* FROM "attendants" WHERE "attendants"."demo_id" = ?  ORDER BY created_at DESC  [["demo_id", 6]]
+  Rendered demos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.2ms)

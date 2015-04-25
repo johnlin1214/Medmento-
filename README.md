@@ -8,3 +8,6 @@ Currently sign-ins at these lunch and learns are done by paper or excel on a lap
 My Models for this app
 Demo - has_many :attendants
 Attendant - belongs_to :demo
+
+YouTube Video Demo
+https://youtu.be/o6ubWoobgeg
