@@ -42,3 +42,7 @@
 #sign-in-header {
   margin-left: 0.8em;
 }
+
+.all-search-results {
+  display: none;
+}
